@@ -14,10 +14,10 @@
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
-        <img src="images/logo.png">
+        <img src="images/logo3.png">
       </div>
       <div class="back">
-        <img class="backImg" src="images/logo.png" alt="">
+        <img class="backImg" src="images/logo3.png" alt="">
       </div>
     </div>
     <div class="forms">
@@ -34,11 +34,11 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Enter your password" required>
               </div>
-              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="text text-color"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
               </div>
-              <div class="text sign-up-text">You are a superadmin user? <label for="flip">Superadmin</label></div>
+              <div class="text sign-up-text">You are a superadmin user? <label for="flip"><strong>Superadmin</strong></label></div>
             </div>
         </form>
       </div>
@@ -54,11 +54,11 @@
                 <i class="fas fa-lock"></i>
                 <input type="password" placeholder="Enter your password" required>
               </div>
-              <div class="text"><a href="#">Forgot password?</a></div>
+              <div class="text text-color"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
               </div>
-              <div class="text sign-up-text">You are an admin user? <label for="flip">Admin</label></div>
+              <div class="text sign-up-text">You are an admin user? <label for="flip"><strong>Admin</strong></label></div>
             </div>
       </form>
     </div>
