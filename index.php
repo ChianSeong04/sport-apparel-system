@@ -78,26 +78,31 @@ https://templatemo.com/tm-559-zay-shop
         <ol class="carousel-indicators">
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" class="active"></li>
             <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>
+            <!--<li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="2"></li>-->
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_01.jpg" alt="">
+                            <img class="img-fluid" src="images/shirt.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>
-                                <h3 class="h2">Tiny and Perfect eCommerce Template</h3>
-                                <p>
+                                <!--<h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>-->
+								<img src="images/logo.png" width="200" height="200"  alt="" />
+                                <h1 class="h1">Sparta Sport Apperal</h1>
+								<p>
+								"Sparta Sport Apperal" is a website which provides services for selling well-known brand sport apparel products.
+								Our webiste mainly selling sport brand such as Nike, Puma, and Under Armour.
+								</p>
+                                <!--<p>
                                     Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1). 
                                     This template is 100% free provided by <a rel="sponsored" class="text-success" href="https://templatemo.com" target="_blank">TemplateMo</a> website. 
                                     Image credits go to <a rel="sponsored" class="text-success" href="https://stories.freepik.com/" target="_blank">Freepik Stories</a>,
                                     <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank">Unsplash</a> and
                                     <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank">Icons 8</a>.
-                                </p>
+                                </p>-->
                             </div>
                         </div>
                     </div>
@@ -107,22 +112,25 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
-                            <img class="img-fluid" src="./assets/img/banner_img_02.jpg" alt="">
+                            <img class="img-fluid" src="images/pants.png" alt="">
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">Proident occaecat</h1>
-                                <h3 class="h2">Aliquip ex ea commodo consequat</h3>
-                                <p>
+                                <h1 class="h1">Shop Now!</h1>
+                                <h3 class="h2">Welcome to Sparta Sport Apperal</h3>
+								<p>
+								Register now to join our member! 
+								</p>
+                                <!--<p>
                                     You are permitted to use this Zay CSS template for your commercial websites. 
                                     You are <strong>not permitted</strong> to re-distribute the template ZIP file in any kind of template collection websites.
-                                </p>
+                                </p>-->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
+            <!--<div class="carousel-item">
                 <div class="container">
                     <div class="row p-5">
                         <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
@@ -140,7 +148,7 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
         <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#template-mo-zay-hero-carousel" role="button" data-bs-slide="prev">
             <i class="fas fa-chevron-left"></i>
@@ -156,10 +164,10 @@ https://templatemo.com/tm-559-zay-shop
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Categories</h1>
-                <p>
+                <!--<p>
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
-                </p>
+                </p>-->
             </div>
         </div>
         <div class="row">

@@ -1,10 +1,11 @@
 <!--top header-->
+<link rel="stylesheet" href="assets/css/templatemo.css">
 <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
             <!--<a class="navbar-brand text-success logo h1 align-self-center" href="index.html">-->
 			<a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
-                <img src="images/logo.png" width="150" height="100"  alt="" />
+                <img src="images/logo.png" width="200" height="150"  alt="" />
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,9 +21,13 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">About</a>
                         </li>
+						<ul class="dropdown">
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.php">Product</a>
+                            <a class="nav-link" href="#">Product</a>
+							<li><a href="#">Men Sport Wear</a></li>
+							<li><a href="#">Women Sport Wear</a></li>
                         </li>
+						</ul>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Contact</a>
                         </li>
@@ -54,7 +59,3 @@
         </div>
     </nav>
 <!-- top header -->
-
-<!--bottom header-->
-
-<!--bottom header-->
