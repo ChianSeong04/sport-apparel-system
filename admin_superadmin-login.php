@@ -2,7 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/admin_style.css">
+    <link rel="stylesheet" href="assets/admin_styles/admin_style.css">
+	<link rel="stylesheet" href="assets/admin_styles/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -34,7 +35,7 @@
 				  </div>
 				  <div class="text text-color"><a href="admin-forget-password.php">Forgot password?</a></div>
 				  <div class="button input-box">
-					<input type="submit" value="Submit">
+				 	 <button type="button" class="btn btn-dark">Dark</button>
 				  </div>
 				  <div class="text sign-up-text">You are a superadmin user?<label for="flip"><strong>&nbsp;Superadmin</strong></label></div>
 				</div>
