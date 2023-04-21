@@ -104,7 +104,7 @@ table.table td h2 span{color:#888;display:block;font-size:12px;margin-top:3px}
 		top:0;
 		z-index:1001;
 		height:80px;
-		background-color:rgb(128,128,128);
+		background-color:rgb(0, 0, 0);
 		padding:0 10px 0 0;}
 		
 .header .header-left{float:left;
@@ -113,7 +113,7 @@ table.table td h2 span{color:#888;display:block;font-size:12px;margin-top:3px}
 					 position:relative;
 					 text-align:center;
 					 width:320px;
-					 background-color:rgb(128,128,128);}
+					 background-color:rgb(0, 0, 0);}
 					 
 .header .header-left .logo img{width:80px; height:80px; margin-top:8px}
 
@@ -121,7 +121,7 @@ table.table td h2 span{color:#888;display:block;font-size:12px;margin-top:3px}
 .logout{float:right; margin-right:15px;margin-top:28px; font-weight:bold; font-size:15pt;color:white;}
 
 /*sidebar*/
-.sidebar{background-color:rgb(128,128,128);bottom:0;left:0;margin-top:0;position:fixed;top:80px;transition:all .2s ease-in-out 0s;width:260px;z-index:1001}
+.sidebar{background-color:rgb(0, 0, 0);bottom:0;left:0;margin-top:0;position:fixed;top:80px;transition:all .2s ease-in-out 0s;width:260px;z-index:1001}
 .sidebar.opened{-webkit-transition:all .4s ease;-moz-transition:all .4s ease;transition:all .4s ease}
 .sidebar-inner{height:100%;min-height:100%;transition:all .2s ease-in-out 0s}
 .sidebar-menu{padding:30px 0 0 15px}

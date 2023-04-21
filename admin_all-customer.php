@@ -104,7 +104,7 @@ $search_validation="";
 <a href="admin_index.php"><i class="fas fa-tachometer-alt"></i> <span>Admin Dashboard</span></a>
 </li>
 <li class="list-divider"></li>
-<li class="submenu" style="background-color:rgb(255, 106, 89);">
+<li class="submenu" style="background-color:grey;">
 <a href="#"><i class="fas fa-user"></i> <span> Customer </span> <span class="menu-arrow"></span></a>
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-customer.php"> All customer </a></li>
@@ -256,9 +256,11 @@ $search_validation="";
 			</div>
 		</div>
 	</div>
-	<script src="assets/js/jquery-3.5.1.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/script.js"></script>
+	<script src="assets/admin_styles/jquery-3.5.1.min.js"></script>
+	<script src="assets/admin_styles/raphael/raphael.min.js"></script>
+	<script src="assets/admin_styles/morris/morris.min.js"></script>
+	<script src="assets/admin_styles/chart.morris.js"></script>
+	<script src="assets/admin_styles/script.js"></script>
 </body>
 
 </html>
