@@ -93,7 +93,7 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
-                                <h1 class="h1">Shop Now!</h1>
+                                <h1 class="h1" style="font-weight:bold">Shop Now!</h1>
                                 <h3 class="h2">Welcome to Sparta Sport Apperal</h3>
 								<p>
 								Register now to join our member! 

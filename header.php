@@ -44,13 +44,15 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">About Us</a>
                         </li>
-						<ul class="dropdown">
+						
                         <li class="nav-item">
                             <a class="nav-link" href="#">Product</a>
-							<li><a href="#">Men Sport Wear</a></li>
-							<li><a href="#">Women Sport Wear</a></li>
+							<div class="dropdown-content">
+							<a href="#">Men Sport Wear</a>
+							<a href="#">Women Sport Wear</a>
+							</div>
                         </li>
-						</ul>
+						
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Contact</a>
                         </li>

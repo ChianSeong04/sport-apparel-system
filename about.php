@@ -74,8 +74,8 @@ https://templatemo.com/tm-559-zay-shop
             <div class="col-lg-6 m-auto">
                 <h1 class="h1">Our Team</h1>
                 <p>
-                    Our team has a total of four members which is the leader xxx and members xxx,xxx,xxx.
-					Meet the incredible team behind out website!
+                    Our team has a total of four members which is the leader Wee Chian Seong and members Chon Zi Kang,Goh Yu Heng,and Ng Po Yee.
+					<p>Meet the incredible team behind out website!</p>
                 </p>
             </div>
         </div>
@@ -83,31 +83,28 @@ https://templatemo.com/tm-559-zay-shop
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><img src="" alt="#" style="#"></div>
-                    <h2>Chian Seong </h2>
-					<p class="title">CEO & Founder</p>
-					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-					<p>jane@example.com</p>
+                    <div class="h1 text-success text-center"><img src="images/chianseong.jpg" alt="Wee Chian Seong" style="width:100%"></div>
+                    <h2>Wee Chian Seong </h2>
+					<p>Student in Bachelor of Computer Science (Hons.) Artificial Intelligence.</p>
+					<p>chianseong020@gmail.com</p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><img src="" alt="#" style="#"></div>
-                    <h2>Chian Seong </h2>
-					<p class="title">CEO & Founder</p>
-					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-					<p>jane@example.com</p>
+                    <div class="h1 text-success text-center"><img src="images/zikang.jpg" alt="Chon Zi Kang" style="width:100%"></div>
+                    <h2>Chon Zi Kang</h2>
+					<p>Student in Bachelor of Computer Science (Hons.) Artificial Intelligence.</p>
+					<p>1201200750@student.mmu.edu.com</p>
                 </div>
             </div>
 
             <div class="col-md-6 col-lg-3 pb-5">
                 <div class="h-100 py-5 services-icon-wap shadow">
-                    <div class="h1 text-success text-center"><img src="" alt="#" style="#"></div>
-                    <h2>Chian Seong </h2>
-					<p class="title">CEO & Founder</p>
-					<p>Some text that describes me lorem ipsum ipsum lorem.</p>
-					<p>jane@example.com</p>
+                    <div class="h1 text-success text-center"><img src="images/yuheng.jpg" alt="Goh Yu Heng" style="width:100%"></div>
+                    <h2>Goh Yu Heng</h2>
+					<p>Student in Bachelor of Computer Science (Hons.) Artificial Intelligence.</p>
+					<p>1201200443@student.mmu.edu.com</p>
                 </div>
             </div>
 
