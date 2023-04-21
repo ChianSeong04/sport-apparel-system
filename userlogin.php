@@ -49,7 +49,7 @@
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
                 Zay
             </a>
 
@@ -86,11 +86,11 @@
                     <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="userlogin.php">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="profile.php">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
@@ -107,7 +107,7 @@
 	<div class="ckeckout">
 		<div class="container">
 			<div class="ckeckout-top">
-				<iframe src="login.html" style="position:absolute;top:150px; left:50; bottom:100; right:60;width:1500px;height:470px;border:none; margin:0; padding:0;z-index:1" id="my-iframe""></iframe>
+				<iframe src="iframe_login.php" style="position:absolute;top:150px; left:30;right:90; bottom:100;width:1500px;height:470px;border:none; margin:0; padding:0;z-index:1" id="my-iframe""></iframe>
 				<table style="color:white;user-select:none;z-index:-2;">
 					<tr>
 						<td>1</td>
