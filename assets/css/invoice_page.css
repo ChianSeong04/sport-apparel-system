@@ -1,0 +1,82 @@
+#invoice{
+	border-style:none;
+	background-color:#ffffff;
+	box-shadow: 0 10px 10px 0 rgb(0 0 0 / 10%);
+	width:80%;
+	margin:64px auto;
+	padding: 27px 50px 32px;
+	box-sizing: border-box;
+		
+}
+
+#title{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.5rem;
+	
+}
+
+table
+{
+	margin: auto;
+	width: 90%;
+    text-align: center;
+	border-collapse: collapse;
+}
+
+tr
+{
+	height:50px;
+}
+
+tr:nth-child(odd) 
+{
+    background-color: #f2f2f2;
+}
+
+td
+{
+	padding:5px;
+}
+
+#print_btn{
+	padding: 10px 50px;
+	text-align:center;
+	font-size: 18px;
+	border-radius: .3rem;
+	border-style: none;
+	color: #ffffff;
+	background-color: #59AB6E;	
+}
+
+#container{
+	padding: 15px;
+}
+
+#first_row{
+	margin:auto;
+	display:flex;
+	justify-content: space-between;
+	border-bottom: 1px solid grey;
+}
+
+#sec_row{
+	padding: 15px;
+	border-bottom: 1px solid grey;
+}
+
+#third_row{
+	padding: 15px; border-bottom: 1px solid grey;
+}
+
+#fourth_row{
+	border-bottom:1px solid grey;
+	padding:10px;
+}
+
+#btn_container{
+	display: flex;
+	width:45%;
+	margin:auto; 
+	padding-top:5%; 
+	justify-content: center;
+}

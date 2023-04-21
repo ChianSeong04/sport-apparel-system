@@ -1,0 +1,49 @@
+#purchase{
+	border-style:none;
+	background-color:#ffffff;
+	box-shadow: 0 10px 10px 0 rgb(0 0 0 / 10%);
+	width:80%;
+	margin:auto;
+	padding: 27px 50px 32px;
+	box-sizing: border-box;
+		
+}
+
+button{
+	padding: 10px 50px;
+	text-align:center;
+	font-size: 18px;
+	border-radius: .3rem;
+	border-style: none;
+	color: #ffffff;
+	background-color: #59AB6E;	
+}
+
+.button_section{
+	padding:10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+#extend{
+	padding:10px;
+	
+	
+}
+
+#product_container{
+	border-bottom:1px solid grey; 
+	padding:10px;
+}
+
+#qty{
+	font-size:14px;
+	color:grey;	
+}
+
+.details{
+	color:grey;
+	font-size:14px;
+}
