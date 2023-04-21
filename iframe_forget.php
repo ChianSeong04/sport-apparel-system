@@ -42,7 +42,7 @@
 
 <script>
 	document.getElementById("resetbtn").addEventListener("click", function() {
-	window.parent.location = "index.php";
+	window.parent.location = "userlogin.php";
 });
 </script>
 

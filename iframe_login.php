@@ -35,7 +35,7 @@
 							<input id="loginbtn" type="submit" name="sendbtn" value="Login">
 						</div>
 						<div class="address">
-						<a class="forgot" href="forget.html">Forgot Your Password?</a>
+						<a class="forgot" href="iframe_forget.php">Forgot Your Password?</a>
 						</div>
 					</div>
 				</div>
