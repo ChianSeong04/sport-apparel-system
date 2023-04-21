@@ -320,12 +320,12 @@ https://templatemo.com/tm-559-zay-shop
     <!-- Start Article -->
     <section class="py-5">
         <div class="container">
-            <div class="row text-left p-2 pb-3">
+            <!--div class="row text-left p-2 pb-3">
                 <h4>Related Products</h4>
-            </div>
+            </div-->
 
             <!--Start Carousel Wrapper-->
-            <div id="carousel-related-product">
+            <!--div id="carousel-related-product">
 
                 <div class="p-2 pb-3">
                     <div class="product-wap card rounded-0">
@@ -783,7 +783,7 @@ https://templatemo.com/tm-559-zay-shop
                     </div>
                 </div>
 
-            </div>
+            </div-->
 
 
         </div>
