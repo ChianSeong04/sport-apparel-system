@@ -156,7 +156,7 @@ https://templatemo.com/tm-559-zay-shop
 
 					<tr class="word" style="color:white; background-color:black;">
 					<th style="padding:25px; text-align:center; width:250px;" colspan="5">Grandtotal</th>
-					<th style="padding:25px; text-align:center;" name="grandtotal"> RM <span id="total"><?php echo number_format("$grand",2); ?></span></th>
+					<th style="padding:25px; text-align:center;" name="grandtotal"> RM <span id="total"></span></th>
 					</tr>
 				</table>
 				<input  type="submit" class="word" style="margin-top:50px; width:90px; height:28px; margin-left:1010px; border-radius:5px;" name="pay" value="Pay Now">
@@ -291,41 +291,6 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
-
-    <!-- Start Slider Script -->
-    <script src="assets/js/slick.min.js"></script>
-    <script>
-        $('#carousel-related-product').slick({
-            infinite: true,
-            arrows: false,
-            slidesToShow: 4,
-            slidesToScroll: 3,
-            dots: true,
-            responsive: [{
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 3
-                    }
-                },
-                {
-                    breakpoint: 480,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 3
-                    }
-                }
-            ]
-        });
-    </script>
-    <!-- End Slider Script -->
 
 </body>
 

@@ -35,7 +35,7 @@
 							<input id="loginbtn" type="submit" name="sendbtn" value="Login">
 						</div>
 						<div class="address">
-						<a class="forgot" href="forget_password.php">Forgot Your Password?</a>
+						<a class="forgot" href="forget.html">Forgot Your Password?</a>
 						</div>
 					</div>
 				</div>
@@ -55,7 +55,9 @@
 							<br>	Create and share gift lists. </p>
 					</div>
 					<div class="address new">
-						<input id="my-button" type=button value='REGISTER NOW' >
+						<a href="iframe_register.php">
+							<input id="my-button" type=button value='REGISTER NOW' ">
+						</a>
 					</div>
 					</form>
 				</div>
@@ -64,12 +66,6 @@
 		</div>
 	</div>
 <!--End Login Box-->
-
-<script>
-	document.getElementById("my-button").addEventListener("click", function() {
-	window.parent.location = "index.php";
-});
-</script>
 
 <script>
 	document.getElementById("loginbtn").addEventListener("click", function() {
