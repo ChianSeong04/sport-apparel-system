@@ -45,8 +45,8 @@
                             <a class="nav-link" href="about.php">About Us</a>
                         </li>
 						
-                        <li class="nav-item">
-                            <a class="nav-link" href="shop.php">Product</a>
+                        <li class="nav-item" id="product_header_selection">
+                            <a class="nav-link"  href="shop.php">Product</a>
 							<div class="dropdown-content">
 							<a href="#">Men Sport Wear</a>
 							<a href="#">Women Sport Wear</a>
