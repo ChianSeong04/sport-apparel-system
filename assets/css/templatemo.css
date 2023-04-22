@@ -216,7 +216,7 @@ body, ul, li, p, a, label, input, div {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-.flex-fill:hover .dropdown-content{
+#product_header_selection:hover .dropdown-content{
 	display: block;
 }
 
