@@ -12,7 +12,7 @@
 	<div class="main-wrapper">
 		<div class="header">
 			<div class="header-left">
-				<a href="admin_index.php" class="logo"> <img src="assets/img/index_logo.png"alt="logo"> <span class="logoclass">Sparta Sport Apparel</span> </a>
+				<a href="admin_index.php" class="logo"> <img src="images/logo4.png"alt="logo"> <span class="logoclass">Sparta Sport Apparel</span> </a>
 			</div>
 			
 			<a href="admin_logout.php" class="logout" >Log Out</a>

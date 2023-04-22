@@ -19,7 +19,7 @@
 		<div class="login-wrapper">
 			<div class="container">
 				<div class="loginbox">
-					<div class="login-left"> <img class="img-fluid" src="assets/img/admin_logo.png" alt="Logo"> </div>
+					<div class="login-left"> <img class="img-fluid" src="images/logo4.png" alt="Logo"> </div>
 					<div class="login-right">
 						<div class="login-right-wrap">
 							<h1>Reset Password</h1>

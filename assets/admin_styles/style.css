@@ -86,7 +86,7 @@ table.table td h2 span{color:#888;display:block;font-size:12px;margin-top:3px}
 .page-item.active .page-link{background-color:steelblue;border-color:steelblue;}
 .card{border:0;border-radius:0;margin-bottom:1.875rem}
 .first_widget{padding:14px}
-.card.board1.fill{-webkit-text-fill-color:steelblue}.card-body{padding:1.5rem}.card-header{border-bottom:1px solid steelblue;padding:1rem 1.5rem}
+.card.board1.fill{-webkit-text-fill-color:rgb(0, 0, 0)}.card-body{padding:1.5rem}.card-header{border-bottom:1px solid steelblue;padding:1rem 1.5rem}
 .card-footer{background-color:#fff;border-top:1px solid #fff;padding:1rem 1.5rem}.card .card-header{background-color:#fff;border-bottom:1px solid steelblue;}
 .card .card-header .card-title{margin-bottom:0;font-size:18px}
 
@@ -131,7 +131,7 @@ table.table td h2 span{color:#888;display:block;font-size:12px;margin-top:3px}
 
 .sidebar-menu ul{font-size:15px;list-style-type:none;padding:0;position:relative;margin-right:15px}
 .sidebar-menu li a{color:white;display:block;font-size:16px;height:auto;padding:0 20px}
-.sidebar-menu li a:hover{color:navy;}
+.sidebar-menu li a:hover{color:rgb(103, 103, 103);}
 .sidebar-menu>ul>li.active>a:hover{border-color:#01776c;color:#fff}
 .menu-title{color:#000;display:flex;font-size:14px;opacity:1;padding:5px 15px;white-space:nowrap;font-weight:600}
 .menu-title>i{float:right;line-height:40px}

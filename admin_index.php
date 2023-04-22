@@ -189,8 +189,8 @@
 					<div class="col-md-12 d-flex">
 						<div class="card card-table flex-fill">
 							<div class="card-header">
-								<h4 class="card-title float-left mt-2">Order</h4>
-								<a href="admin_all-order.php" class="btn btn-primary float-right veiwbutton">View All</a>
+								<h3 class="page-title float-left mt-2">Order</h3>
+								<a href="admin_all-order.php" class="mt-2 btn btn-primary float-right veiwbutton">View All</a>
 							</div>
 							<div class="card-body">
 								<div class="table-responsive">
