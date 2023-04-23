@@ -12,10 +12,10 @@
     <input type="checkbox" id="flip">
     <div class="cover">
         <div class="front">
-          <img src="images/logo3.png">
+          <img src="images/admin_login_logo.png">
         </div>
         <div class="back">
-          <img class="backImg" src="images/logo3.png" alt="">
+          <img class="backImg" src="images/admin_login_logo.png">
         </div>
 	</div>
 <?php

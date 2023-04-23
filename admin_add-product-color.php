@@ -28,7 +28,7 @@
 				alert("Please Log In!");
 				</script>
 		<?php
-			header("refresh:0.2; url=admin_login.php");
+			header("refresh:0.2; url=admin_superadmin-login.php");
 			exit();
 		}
 	

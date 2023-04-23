@@ -73,7 +73,7 @@ if(isset($_POST["resetbtn"]))
 <script>swal({title:"Password Changed!",
 				icon:"success",
 				text:"You Have Change Your Password Successfully",
-				button:"Back To Login"}	).then(function(){window.location.href="admin_login.php";}); </script>
+				button:"Back To Login"}	).then(function(){window.location.href="url=admin_superadmin-login.php";}); </script>
 <?php
 	}
 }

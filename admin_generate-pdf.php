@@ -7,7 +7,7 @@ include_once('session_connect.php');// my db connection
 $pdf=new FPDF();
 $pdf->AddPage();
 
-		$pdf->Image('assets/img/admin_logo.png',10,8,33);
+		$pdf->Image('images/logo.png',10,8,33);
 		$pdf->SetFont('times','B',20);
 		$pdf->SetXY(50, 10);
 		$pdf->Cell(0,30,'Sparta Sport Appparel Sales Report',0,2,'C');
