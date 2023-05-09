@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<style>
+#error_message{
+	color:red;
+}
+
+</style>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
@@ -76,7 +82,7 @@
 			?>
 			<script>
 				alert("Login Successfully.");
-				</script>
+			</script>
 
 <?php
 				header("refresh:0.1; url=admin_index.php");
@@ -98,13 +104,14 @@
 				<div class="input-boxes">
 				  <div class="input-box">
 					<i class="fas fa-user"></i>
-					<input type="text" name="admin_id" placeholder="Enter your Admin Id" required>
+					<input type="text" name="admin_id" placeholder="Enter your Admin Id" value="<?php echo isset($_GET["admin_id"]) ? $_GET["admin_id"] : ''; ?>" required>
 				  </div>
 				  <div class="input-box">
 					<i class="fas fa-lock"></i>
-					<input type="password" placeholder="Enter your password" name="admin_password"required>
+					<input type="password" placeholder="Enter your password" name="admin_password" value="<?php echo isset($_GET["admin_password"]) ? $_GET["admin_password"] : ''; ?>" required>
 				  </div>
 				  <div class="text text-color"><a href="admin-forget-password.php">Forgot password?</a></div>
+				  <span id="error_message"> <?php echo $error; ?> </span>
 				  <div class="button input-box">
 				  	<button class="btn btn-primary btn-lg btn-block btn-dark" name="sendbtn" type="submit">Login</button>
 				  </div>
