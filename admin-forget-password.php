@@ -45,8 +45,8 @@ $result=mysqli_query($connect,"SELECT * FROM admin WHERE admin_email='$email'");
 if(mysqli_num_rows($result) != 0){
 	
 	$subject = "Admin Reset Password";
-	$message = "You can reset your password by clicking on the link below \n\n http://localhost/sport-apparel-system/admin_reset-password.php";
-	$sender = "From: Sparta Sport Apparel <chiantian20@gmail.com>";
+	$message = "You can reset your password by clicking on the link below \n\n http://localhost:8080/sport-apparel-system/admin_reset-password.php";
+	$sender = "From: Sparta Sport Apparel <spartasportapparelfyp@gmail.com>";
 
 	mail($email,$subject,$message,$sender);
 

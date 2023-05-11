@@ -95,6 +95,72 @@
 		}
 	}
 
+	if(isset($_GET["super_sendbtn"]))
+	{
+		if(empty($_GET["superadmin_id"]) && empty($_GET["superadmin_password"])) //no enter anythings in form
+		{
+			$error = "Please fill in ID and Password";
+		}
+		else if(empty($_GET["superadmin_id"]))
+		{
+			$error = "Please fill in ID";
+		}
+		else if( empty($_GET["superadmin_password"]))
+		{
+			$error = "Please fill in Password";
+		}
+		else
+		{
+			$id = $_GET["superadmin_id"];
+			$pass = $_GET["superadmin_password"];
+			
+			$id = mysqli_real_escape_string($connect,$id);
+			$pass = mysqli_real_escape_string($connect,$pass); 
+			//escape those special character
+			
+			$result = mysqli_query($connect,"SELECT * FROM superadmin WHERE superadmin_id='$id' AND superadmin_password='$pass'");
+			
+			$count = mysqli_num_rows($result);
+			
+			if($count == 1)
+			{
+				$row = mysqli_fetch_assoc($result);
+				if($id!=$row['superadmin_id'])
+				{
+					if($pass != $row['superadmin_password'])
+					{
+						$error="*Invalid Password";
+					}
+					$error="*Invalid ID";
+				}
+				else if($pass != $row['superadmin_password'])
+				{
+					if($id != $row['superadmin_id'])
+					{
+						$error="*Invalid ID";
+					}
+					$error="*Invalid Password";
+				}
+				else
+				{
+				$_SESSION["id"] = $row["superadmin_id"]; 
+			?>
+			<script>
+				alert("Login Successfully.");
+			</script>
+
+<?php
+				header("refresh:0.1; url=superadmin_index.php");
+			}
+		}
+			else
+			{
+				$error = "ID or Password are invalid.";
+			}
+		}
+	}
+
+	
 ?>
 	<div class="forms">
 		<div class="form-content">
@@ -122,20 +188,20 @@
 		  
 			<div class="signup-form">
 				<div class="title">Superadmin Login</div>
-				<form action="#">
+				<form autocomplete="off">
 					<div class="input-boxes">
 					  <div class="input-box">
 						<i class="fas fa-user"></i>
-						<input type="text" placeholder="Enter your Superadmin Id" required>
+						<input type="text" name="superadmin_id" placeholder="Enter your Superadmin Id" value="<?php echo isset($_GET["superadmin_id"]) ? $_GET["superadmin_id"] : ''; ?>" required>
 					  </div>
 					  <div class="input-box">
 						<i class="fas fa-lock"></i>
-						<input type="password" placeholder="Enter your password" required>
+						<input type="password" placeholder="Enter your password" name="superadmin_password" value="<?php echo isset($_GET["superadmin_password"]) ? $_GET["superadmin_password"] : ''; ?>" required>
 					  </div>
 					  <div class="text text-color"><a href="admin-forget-password.php">Forgot password?</a></div>
 					  <div class="button input-box">
-						<input type="submit" value="Sumbit">
-					  </div>
+				  	<button class="btn btn-primary btn-lg btn-block btn-dark" name="super_sendbtn" type="submit">Login</button>
+				  </div>
 					  <div class="text sign-up-text">You are an admin user?<label for="flip"><strong>&nbsp;Admin</strong></label></div>
 					</div>
 				</form>

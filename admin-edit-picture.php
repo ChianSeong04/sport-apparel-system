@@ -228,7 +228,7 @@
 									</div>
 								</div>
 
-                <input  type="submit" class="btn btn-primary buttonedit ml-2" name="save_product" value="Save">
+                <input  type="submit" class="btn btn-primary buttonedit ml-2" name="save_prt" value="Save">
 				<a href="admin_profile.php" class="btn btn-secondary">Back</a>
                 </form>
 						</div>
