@@ -23,7 +23,7 @@
 	<div class="forms">
 		<div class="form-content">
 			<div class="login-form">
-			  <div class="title">Admin Forget Password</div>
+			  <div class="title">Superdmin Forget Password</div>
 			  <form method="post" autocomplete="off">
 				<div class="input-boxes">
 				  <div class="input-box">
@@ -41,11 +41,11 @@
 if(isset($_POST["sendbtn"])){
 $email=$_POST["email"];
 $_SESSION["email"]="$email";
-$result=mysqli_query($connect,"SELECT * FROM admin WHERE admin_email='$email'");
+$result=mysqli_query($connect,"SELECT * FROM superadmin WHERE superadmin_email='$email'");
 if(mysqli_num_rows($result) != 0){
 	
-	$subject = "Admin Reset Password";
-	$message = "You can reset your password by clicking on the link below \n\n http://localhost:8080/sport-apparel-system/admin_reset-password.php";
+	$subject = "Superadmin Reset Password";
+	$message = "You can reset your password by clicking on the link below \n\n http://localhost:8080/sport-apparel-system/superadmin_reset_password.php";
 	$sender = "From: Sparta Sport Apparel <spartasportapparelfyp@gmail.com>";
 
 	mail($email,$subject,$message,$sender);

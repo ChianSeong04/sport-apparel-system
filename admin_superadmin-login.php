@@ -94,20 +94,20 @@
 			}
 		}
 	}
-
+	$superadmin_error = "";
 	if(isset($_GET["super_sendbtn"]))
 	{
 		if(empty($_GET["superadmin_id"]) && empty($_GET["superadmin_password"])) //no enter anythings in form
 		{
-			$error = "Please fill in ID and Password";
+			$superadmin_error = "Please fill in ID and Password";
 		}
 		else if(empty($_GET["superadmin_id"]))
 		{
-			$error = "Please fill in ID";
+			$superadmin_error = "Please fill in ID";
 		}
 		else if( empty($_GET["superadmin_password"]))
 		{
-			$error = "Please fill in Password";
+			$superadmin_error = "Please fill in Password";
 		}
 		else
 		{
@@ -129,17 +129,17 @@
 				{
 					if($pass != $row['superadmin_password'])
 					{
-						$error="*Invalid Password";
+						$superadmin_error="*Invalid Password";
 					}
-					$error="*Invalid ID";
+					$superadmin_error="*Invalid ID";
 				}
 				else if($pass != $row['superadmin_password'])
 				{
 					if($id != $row['superadmin_id'])
 					{
-						$error="*Invalid ID";
+						$superadmin_error="*Invalid ID";
 					}
-					$error="*Invalid Password";
+					$superadmin_error="*Invalid Password";
 				}
 				else
 				{
@@ -198,7 +198,8 @@
 						<i class="fas fa-lock"></i>
 						<input type="password" placeholder="Enter your password" name="superadmin_password" value="<?php echo isset($_GET["superadmin_password"]) ? $_GET["superadmin_password"] : ''; ?>" required>
 					  </div>
-					  <div class="text text-color"><a href="admin-forget-password.php">Forgot password?</a></div>
+					  <div class="text text-color"><a href="superadmin_forgot-password.php">Forgot password?</a></div>
+					  <span id="error_message"> <?php echo $superadmin_error; ?> </span>
 					  <div class="button input-box">
 				  	<button class="btn btn-primary btn-lg btn-block btn-dark" name="super_sendbtn" type="submit">Login</button>
 				  </div>

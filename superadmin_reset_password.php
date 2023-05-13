@@ -1,89 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <?php
 		session_start();
 		include("session_connect.php");
 ?>	
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Forgot Password</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="assets/admin_styles/admin_style.css">
 	<link rel="stylesheet" href="assets/admin_styles/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/admin_styles/fontawesome/css/fontawesome.min.css">
-	<link rel="stylesheet" href="assets/admin_styles/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="assets/admin_styles/style.css"> </head>
-
-    <?php 
-	$error="";
-if(isset($_POST["resetbtn"]))
-{
-
-	$newpass=$_POST["password"];
-	$conpass=$_POST["con_password"];
-	$email=$_SESSION["email"];
-
-	if($newpass != $conpass)
-	{
-			$error="Password is not matching.";
-	}
-	else
-	{
-	$result=mysqli_query($connect,"UPDATE superadmin SET superadmin_password='$newpass'
-													WHERE superadmin_email='$email'; ");
-
-?>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>swal({title:"Password Changed!",
-				icon:"success",
-				text:"You Have Change Your Password Successfully",
-				button:"Back To Login"}	).then(function(){window.location.href="admin_superadmin-login.php";}); </script>
-<?php
-	}
-}
-
-?>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-	<div class="main-wrapper login-body">
-		<div class="login-wrapper">
-			<div class="container">
-				<div class="loginbox">
-					<div class="login-left"> <img class="img-fluid" src="superadmin_assets/img/admin_logo.png" alt="Logo"> </div>
-					<div class="login-right">
-						<div class="login-right-wrap">
-                        <h1>Reset Password</h1>
-							<p class="account-subtitle">Enter your new password to reset password</p>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+          <img src="images/admin_login_logo.png">
+        </div>
+	</div>
 
-							<form method="post">
+	<div class="forms">
+		<div class="form-content">
+			<div class="login-form">
+			  <div class="title">Reset Password</div>
+			  <form method="post" autocomplete="off">
+				<div class="input-boxes">
+				  <div class="input-box">
+					<i class="fas fa-lock"></i>
+					<input class="form-control" type="password" placeholder="Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> 
+				  </div>
+                  <p style="color:red;">*Password should consist of a mixture of numbers and both uppercase and lowercase letters with at least 14 characters </p></div>
 
-                            <div class="form-group">
-
-                                <input class="form-control" type="password" placeholder="Password" name="password" required> </div>
-                                <div class="form-group mb-0">
-
-                                <div class="form-group">
-                                <input class="form-control" type="password" placeholder="Confirmation Password" name="con_password" required> </div>
-                                <span style="color:red;"><?php echo $error; ?></span>
-                                <div class="form-group mb-0">
-
-                                <button class="btn btn-primary btn-block" type="submit" name="resetbtn">Reset Password</button>
-
-
-							</form>
-
-
-							
-
-						</div>
-					</div>
+                  <div class="input-box">
+					<i class="fas fa-lock"></i>
+					<input class="form-control" type="password" placeholder="Password" name="con_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> 
+				  </div>
+				  <div class="button input-box">
+					<button class="btn btn-primary btn-block btn-dark" type="submit" name="resetbtn">Reset Password</button>
+				  </div>
 				</div>
+            </form>
+            <?php 
+	
+    if(isset($_POST["resetbtn"]))
+    {
+    
+        $newpass=$_POST["password"];
+        $conpass=$_POST["con_password"];
+        $email=$_SESSION["email"];
+    
+        if($newpass != $conpass)
+        {
+            ?>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script>swal({title:"Failed To Reset Password",
+                                    icon:"error",
+                                    text:"Not matching password. Please try again" ,
+                                    button:"Ok"}); </script>
+    
+    
+           <?php
+        }
+        else
+        {
+        $result=mysqli_query($connect,"UPDATE superadmin SET superadmin_password='$newpass'
+                                                        WHERE superadmin_email='$email'; ");
+    
+    ?>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>swal({title:"Password Changed!",
+                    icon:"success",
+                    text:"You Have Change Your Password Successfully",
+                    button:"Back To Login"}	).then(function(){window.location.href="admin_superadmin-login.php";}); </script>
+    <?php
+        }
+    }
+    
+    ?>
+    
 			</div>
 		</div>
-	</div>
-	<script src="superadmin_assets/js/jquery-3.5.1.min.js"></script>
-	<script src="superadmin_assets/js/popper.min.js"></script>
-	<script src="superadmin_assets/js/bootstrap.min.js"></script>
-	<script src="superadmin_assets/js/script.js"></script>
+    </div>
+  </div>
 </body>
-
 </html>
