@@ -4,17 +4,13 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <!--<a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>-->
-					<a class="navbar-sm-brand text-light text-decoration-non" href="mailto:info@company.com">spartasportapparel@google.com</a>
+					<a class="navbar-sm-brand text-light text-decoration-non" href="spartasportapparelfyp@gmail.com">spartasportapparelfyp@gmail.com</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <!--<a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>-->
 					<a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">016-123 4567</a>
                 </div>
                 <div>
                     <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
                     <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <!--<a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>-->
                 </div>
             </div>
         </div>
@@ -42,11 +38,11 @@
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About Us</a>
+                            <a class="nav-link" href="about_us.php">About Us</a>
                         </li>
 						
                         <li class="nav-item" id="product_header_selection">
-                            <a class="nav-link"  href="shop.php">Product</a>
+                            <a class="nav-link"  href="product.php">Product</a>
 							<div class="dropdown-content">
 							<a href="#">Men Sport Wear</a>
 							<a href="#">Women Sport Wear</a>
@@ -54,7 +50,7 @@
                         </li>
 						
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.php">Contact</a>
+                            <a class="nav-link" href="contact_us.php">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -70,13 +66,16 @@
                     <!--<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>-->
-                    <a class="nav-icon position-relative text-decoration-none" href="userlogin.php">
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="profile.php">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="user_login.php">
+                        Login/Register
                     </a>
                 </div>
             </div>

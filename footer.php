@@ -13,11 +13,11 @@
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">016-123 456</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340">017-9662171</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">spartasportapparel@google.com</a>
+                            <a class="text-decoration-none" href="mailto:spartasportapparelfyp@gmail.com">spartasportapparelfyp@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -25,13 +25,6 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <!--<li><a class="text-decoration-none" href="#">Luxury</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Wear</a></li>
-                        <li><a class="text-decoration-none" href="#">Men's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Women's Shoes</a></li>
-                        <li><a class="text-decoration-none" href="#">Popular Dress</a></li>
-                        <li><a class="text-decoration-none" href="#">Gym Accessories</a></li>
-                        <li><a class="text-decoration-none" href="#">Sport Shoes</a></li>-->
 						<li><a class="text-decoration-none" href="#">Men Sport Wear</a></li>
 						<li><a class="text-decoration-none" href="#">Women Sport Wear</a></li>
 						
@@ -41,11 +34,9 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="#">Home</a></li>
-                        <li><a class="text-decoration-none" href="#">About Us</a></li>
-                        <!--<li><a class="text-decoration-none" href="#">Shop Locations</a></li>
-                        <li><a class="text-decoration-none" href="#">FAQs</a></li>-->
-                        <li><a class="text-decoration-none" href="#">Contact</a></li>
+                        <li><a class="text-decoration-none" href="index.php">Home</a></li>
+                        <li><a class="text-decoration-none" href="about_us.php">About Us</a></li>
+                        <li><a class="text-decoration-none" href="contact_us.php">Contact</a></li>
                     </ul>
                 </div>
 
