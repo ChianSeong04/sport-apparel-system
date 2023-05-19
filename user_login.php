@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
   <meta charset="UTF-8">
-	<title>Zay Shop - Product Detail Page</title>
+	<title>Login/Register</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">

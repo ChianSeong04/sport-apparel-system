@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Product Detail Page</title>
+    <title>Add To Cart</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,13 +20,6 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-<!--
-    
-TemplateMo 559 Zay Shop
-
-https://templatemo.com/tm-559-zay-shop
-
--->
 </head>
 
 <body>
@@ -56,13 +49,10 @@ https://templatemo.com/tm-559-zay-shop
     <div class="ckeckout">
         <div class="container">
             <div class="ckeckout-top">
-                <div class=" cart-items heading">
-                    <h3>My Shopping Bag</h3>
-
-
+                <div class="cart-items heading">
+                    <h3 class="mt-5">My Shopping Bag</h3>
                     <form method="post">
                         <table>
-
                             <tr class="word" style="color:white; background-color:black;">
                                 <th style="padding:25px; text-align:center; width:100px;">Product</th>
                                 <th style="padding:25px; text-align:center; width:12000px;">Product Name</th>
@@ -78,7 +68,7 @@ https://templatemo.com/tm-559-zay-shop
                                 <td style="padding:25px; text-align:center;">1</td>
                                 <td style="padding:25px; text-align:center;">RM 1500.00</td>
                                 <td style="padding:25px; text-align:center;">RM 1500.00</td>
-                                <td style="padding:25px; text-align:center;">DELETE</td>
+                                <td><button type="button" class="btn btn-danger">DELETE</button></td>
                             </tr>
 
                             <tr class="word" style="color:white; background-color:black;">
@@ -89,6 +79,48 @@ https://templatemo.com/tm-559-zay-shop
                         <input type="submit" class="word" style="margin-top:50px; width:90px; height:28px; margin-left:1010px; border-radius:5px;" name="pay" value="Pay Now">
                     </form>
 
+<!--Second version -->
+                <h3 class="mt-5">My Shopping Bag</h3>
+                    <form method="post">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Product Name</th>
+                                    <th>Product Quantity</th>
+                                    <th>Product Price</th>
+                                    <th>Product Subtotal</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="align-middle"><img src="images/backImg.jpg" style="height:200px;weight:200px;"></td>
+                                    <td class="align-middle">Women</td>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle">RM 1500.00</td>
+                                    <td class="align-middle">RM 1500.00</td>
+                                    <td class="align-middle"><button type="button" class="btn btn-danger">DELETE</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="align-middle"><img src="images/backImg.jpg" style="height:200px;weight:200px;"></td>
+                                    <td class="align-middle">Women</td>
+                                    <td class="align-middle">1</td>
+                                    <td class="align-middle">RM 1500.00</td>
+                                    <td class="align-middle">RM 1500.00</td>
+                                    <td class="align-middle"><button type="button" class="btn btn-danger">DELETE</button></td>
+                                </tr>
+
+                                <tr class="word table-dark">
+                                    <th  class="align-middle" style="text-align:center;" colspan="5">Grandtotal</th>
+                                    <th  class="align-middle" > RM <span id="total">123123123</span></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col text-end mt-2">
+                            <button type="submit" class="btn btn-dark mb-3">Pay Now</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
