@@ -37,9 +37,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about_us.php">About Us</a>
-                        </li>
 						
                         <li class="nav-item" id="product_header_selection">
                             <a class="nav-link"  href="product.php">Product</a>
@@ -48,9 +45,9 @@
 							<a href="#">Women Sport Wear</a>
 							</div>
                         </li>
-						
+
                         <li class="nav-item">
-                            <a class="nav-link" href="contact_us.php">Contact</a>
+                            <a class="nav-link" href="about_us.php">About Us</a>
                         </li>
                     </ul>
                 </div>
@@ -66,14 +63,21 @@
                     <!--<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
                         <i class="fa fa-fw fa-search text-dark mr-2"></i>
                     </a>-->
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <a class="nav-icon position-relative text-decoration-none" href="add_to_cart.php">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="profile.php">
-                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                    </a>
+                    <div class="dropdown-personal">
+                        <a class="nav-icon position-relative text-decoration-none" href="profile.php">
+                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                            Hi, Shawn
+                        </a>
+                        <div class="dropdown-content-personal">
+                            <a href="profile.php">My Account</a>
+                            <a href="purchase_history.php">My Order</a>
+                            <a href="logout.php">Log Out</a>
+                        </div>
+                    </div>
                     <a class="nav-icon position-relative text-decoration-none" href="user_login.php">
                         Login/Register
                     </a>
