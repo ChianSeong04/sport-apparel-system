@@ -716,11 +716,6 @@ https://templatemo.com/tm-559-zay-shop
     </section>
     <!-- End Article -->
 
-
-    <!--Footer-->
-    <?php include("footer.php") ?>
-    <!--Close Footer-->
-
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
@@ -765,5 +760,7 @@ https://templatemo.com/tm-559-zay-shop
     <!-- End Slider Script -->
 
 </body>
-
+    <!--Footer-->
+    <?php include("footer.php") ?>
+    <!--Close Footer-->
 </html>
