@@ -107,15 +107,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="images/womensportswear.jpg" class="rounded-circle img-fluid border"></a>
-                <h5 class="text-center mt-3 mb-3">Women Sport Wear</h5>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            <div class="col-md-6">
+				<div class="position-relative d-flex align-items-end">
+					<a href="#"><img src="images/womensportswear.jpg" class="img-fluid"></a>
+					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
+						<h5 style="font-size:1.5rem;font-style:bold;color:white;">Women Sport Wear</h5>
+						<a class="btn btn-success">Go Shop</a>
+					</div>
+				</div>
             </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="images/mensportswear.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Men Sport Wear</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            <div class="col-md-6">
+				<div class="position-relative d-flex align-items-end">
+					<a href="#"><img src="images/mensportswear.jpg" class="img-fluid"></a>
+					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
+						<h5 style="font-size:1.5rem;font-style:bold;">Men Sport Wear</h5>
+						<a class="btn btn-success">Go Shop</a>
+					</div>
+				</div>
             </div>
         </div>
     </section>
