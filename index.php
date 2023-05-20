@@ -61,9 +61,9 @@
                             <div class="text-align-left align-self-center">
                                 <!--<h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>-->
 								<img src="images/logo.png" width="200" height="200"  alt="" />
-                                <h1 class="h1">Sparta Sport Apperal</h1>
+                                <h1 class="h1">Sparta Sport Apparel</h1>
 								<p>
-								"Sparta Sport Apperal" is a website which provides services for selling well-known brand sport apparel products.
+								"Sparta Sport Apparel" is a website which provides services for selling well-known brand sport apparel products.
 								Our webiste mainly selling sport brand such as Nike, Puma, and Under Armour.
 								</p>
                             </div>
@@ -80,7 +80,7 @@
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
                                 <h1 class="h1" style="font-weight:bold">Shop Now!</h1>
-                                <h3 class="h2">Welcome to Sparta Sport Apperal</h3>
+                                <h3 class="h2">Welcome to Sparta Sport Apparel</h3>
 								<p>
 								Register now to join our member! 
 								</p>
