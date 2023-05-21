@@ -32,11 +32,14 @@
 		<h4>All Purchase</h4>
 			<div class="p-3" >
 				<div class="row">
-					<div class="col-md-8">
+					<div class="col-md-2">
 						<h5 id="item"> Item</h5>
 					</div>
+					<div class="col-md-6">
+						<h5 id="item_name"> Item Name</h5>
+					</div>
 					<div class="col-md-2">
-						<h5 id="unit_price"> Unit Price</h5>
+						<h5 id="item_qty"> Quantity</h5>
 					</div>
 					<div class="col-md-2">
 						<h5 id="total_prod_price"> Total Price</h5>
@@ -48,22 +51,17 @@
 					<div class="row">
 		
 						<div class="col-md-2">
-							<img src="assets/img/category_img_01.jpg" width="80px" height="80px">
-						</div>
-							
+							<img src="images/Nike Sportswear Tech Fleece.jfif" width="80px" height="80px">
+						</div>							
 						<div class="col-md-6">
-							<span id="prod_title"><p>Casio Watch</p>
-							<span id="qty"><p>x 2 </p></span>
+							<span id="prod_title"><p>Nike Sportswear Tech Fleece</p>
 
-						</div>
-							
+						</div>	
 						<div class="col-md-2">
-								<span>RM 150</span>
+							<span>x 1</span>
 						</div>
-							
-							
 						<div class="col-md-2">
-							<span>RM 300</span>
+							<span>RM 349</span>
 						</div>
 							
 
@@ -72,10 +70,10 @@
 					<div class="row extra1" id="extend">
 							<h5>Order ID </h5>
 							<p class="details">A878287</p>
-							<h5>Delivery Address </h5>
-							<p id="receipient_address"> Lot No 7, Seksyen 33, Jalan Melayu, Off Jalan Masjid India 50100 Kuala Lumpur</p>
 							<h5>Order Date </h5>
 							<p class="details">15/4/2023</p>
+							<h5>Product Status </h5>
+							<p id="product_status"> Pending</p>
 							<h5>Payment Method </h5>
 							<p class="details">Credit/Debit</p>
 

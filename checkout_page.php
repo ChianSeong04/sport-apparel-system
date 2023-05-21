@@ -21,21 +21,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
-<script>
-    window.addEventListener("DOMContentLoaded", function() {
-		$("#credit_card_input_field").hide();
-		$("input[type=radio][name=payment_type]").change(function(){
-			selected_value = $("input[name='payment_type']:checked").val();
-			if(selected_value=="creditcard"){
-				$("#credit_card_input_field").show();
-				 
-			} else{
-				 $("#credit_card_input_field").hide();
-			}
-		});
-		
-	});
-</script>
+	<link rel="stylesheet" href="assets/css/invoice_page.css">
+
 </head>
 	<body>
 		<?php include("header.php") ?>
@@ -68,20 +55,20 @@
 									</div>
 										<div class="row">	
 											<div class="col-md-2">
-												<img src="assets/img/category_img_01.jpg" width="80px" height="80px">
+												<img src="images/Nike Sportswear Tech Fleece.jfif" width="80px" height="80px">
 											</div>
 											
 											<div class="col-md-6">
-												<span id="prod_title"><p>Casio Watch</p>
+												<span id="prod_title"><p>Nike Sportswear Tech Fleece</p>
 												<span id="qty"><p>x 2 </p></span>
 											</div>
 											
 											<div class="col-md-2">
-													<span>RM 150</span>
+													<span>RM 349</span>
 											</div>
 																					
 											<div class="col-md-2">
-												<span>RM 300</span>
+												<span>RM 698</span>
 											</div>									
 										</div>
 									</div>
@@ -89,13 +76,7 @@
 							</div>
 							<div class="col-md-5">
 								<div id="right-container" class="p-3">
-									<div id="payment_container">
-										<h4>Payment Method</h4>  
-										<br>  
-										<input type="radio" id="creditcard_selection" class="creditcard_selection" name="payment_type" value="creditcard"/> Credit Card    
-										<br>  
-										<input type="radio" id="cod_selection" class="cod_selection" name="payment_type" value="cod"/> COD <br/> 
-									</div>
+									<h4>Payment</h4>
 									
 									<div class="row p-3" id="credit_card_input_field">
 									<div class="col-md-12">
@@ -129,7 +110,7 @@
 											</div>
 										</div>
 										<div style="display: grid;">
-											<input type="button" value="Place Order" id="order_btn" style="margin:auto;">
+											<input type="button" value="Place Order" id="order_btn" style="margin:auto;" onclick="show_generate_invoice()">
 										</div>
 										
 									</div>
@@ -138,7 +119,42 @@
 						</div>
 				</div>
 			</form>
+			
+
+
+<!-- Modal -->
+		<div class="modal fade" id="modal_generate_invoice" tabindex="-1" aria-labelledby="GenerateInvoiceModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="GenerateInvoiceModalLabel">Generate Invoice</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+			  <div class="modal-body">
+				<p>Thank you for your purchasing ! Do you want to generate invoice ?</p>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="calcel_btn">Cancel</button>
+				<button type="button" class="btn btn-primary" id="generate_invoice">Generate</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+
 		</div>		
 <?php include("footer.php") ?>
 </body>
+<script>
+    function show_generate_invoice() {
+        $("#modal_generate_invoice").modal('show');
+    }
+	$('#calcel_btn').click(function(){
+   window.location.href='index.php';
+})
+	$('#generate_invoice').click(function(){
+   window.location.href='invoice_page.php';
+})
+
+</script>
 </html>

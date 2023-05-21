@@ -8,6 +8,15 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 		
 		<link rel="stylesheet" href="assets/css/invoice_page.css">
+<style>
+@media print { 
+	#print_btn{
+		display: none;
+		
+	}
+}
+
+</style>
 </head>
 <body style="background-color:#eff0f5;">
 	<div id="invoice">
@@ -62,10 +71,10 @@
 				</tr>
 					<tr>
 						<td>1.</td>
-						<td>Nike Cloth</td>
+						<td>Nike Sportswear Tech Fleece</td>
 						<td>2 </td>
-						<td>35.00 </td>
-						<td>70.00 </td>
+						<td>349.00 </td>
+						<td>698.00 </td>
 				
 
 					</tr>
@@ -78,7 +87,7 @@
 						<p style="font-weight:700;">Total</p>
 					</div>
 					<div class="col-md-3">
-						<span> <p>RM 70.00 </p> </span>
+						<span> <p>RM 698.00 </p> </span>
 					</div>
 				</div>
 
