@@ -510,7 +510,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	font-family: 'Lato', sans-serif;
 }
 .address input[type="submit"] {
-	background: RGB(255, 106, 89);
+	background: RGB(0, 0, 0);
 	color: #FFF;
 	font-size: 1em;
 	padding: 0.5em 1.2em;
@@ -527,7 +527,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	height: 50px;
 }
 .address input[type="submit"]:hover {
-	background:#cb0000;
+	background:	#C0C0C0;
 	transition: 0.5s all;
 	-webkit-transition: 0.5s all;
 	-moz-transition: 0.5s all;
@@ -610,14 +610,14 @@ ol.breadcrumb {
 	margin: 0;
 }
 .breadcrumb li a{
-	color:#242424;
+	color:black;
 }
 .breadcrumb li a:hover{
-	color:#e64b50;
+	color:red;
 	text-decoration:none;
 }
 .breadcrumb > .active {
-	color: #242424;
+	color: black;
 }
 .breadcrumb {
 	background: none;
