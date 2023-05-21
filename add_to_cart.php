@@ -45,41 +45,10 @@
     </div>
 
     <!--Start Content-->
-    <!--start-ckeckout-->
     <div class="ckeckout">
         <div class="container">
             <div class="ckeckout-top">
                 <div class="cart-items heading">
-                    <h3 class="mt-5">My Shopping Bag</h3>
-                    <form method="post">
-                        <table>
-                            <tr class="word" style="color:white; background-color:black;">
-                                <th style="padding:25px; text-align:center; width:100px;">Product</th>
-                                <th style="padding:25px; text-align:center; width:12000px;">Product Name</th>
-                                <th style="padding:25px; text-align:center; width:20px;">Product Quantity</th>
-                                <th style="padding:25px; text-align:center; width:8000px;">Product Price</th>
-                                <th style="padding:25px; text-align:center; width:8000px;">Product Subtotal</th>
-                                <th style="padding:25px; text-align:center; width:20px;">Action</th>
-                            </tr>
-
-                            <tr class="word">
-                                <td style="padding:25px; text-align:center;"><img src="images/backImg.jpg" style="height:200px;weight:200px;"></td>
-                                <td style="padding:25px; text-align:center;"><br>Women</td>
-                                <td style="padding:25px; text-align:center;">1</td>
-                                <td style="padding:25px; text-align:center;">RM 1500.00</td>
-                                <td style="padding:25px; text-align:center;">RM 1500.00</td>
-                                <td><button type="button" class="btn btn-danger">DELETE</button></td>
-                            </tr>
-
-                            <tr class="word" style="color:white; background-color:black;">
-                                <th style="padding:25px; text-align:center; width:250px;" colspan="5">Grandtotal</th>
-                                <th style="padding:25px; text-align:center;" name="grandtotal"> RM <span id="total"></span></th>
-                            </tr>
-                        </table>
-                        <input type="submit" class="word" style="margin-top:50px; width:90px; height:28px; margin-left:1010px; border-radius:5px;" name="pay" value="Pay Now">
-                    </form>
-
-<!--Second version -->
                 <h3 class="mt-5">My Shopping Bag</h3>
                     <form method="post">
                         <table class="table table-hover">

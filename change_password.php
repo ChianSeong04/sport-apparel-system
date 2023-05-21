@@ -52,27 +52,21 @@
             <form>
 				<div class="form-row">
 					<div class="form-group">
-						<label><strong>First Name</strong></label>
+						<label><strong>Current Password*</strong></label>
 						<br>
-						<input type="text" class="form-control input-lg">
+						<input type="password" class="form-control input-lg">
 					</div>
 					<br>
 					<div class="form-group">
-						<label><strong>Last Name</strong></label>
+						<label><strong>New Password*</strong></label>
 						<br>
-						<input type="text" class="form-control input-lg">
+						<input type="password" class="form-control input-lg">
+                        <p>**Password should consist of a mixture of numbers and both uppercase and lowercase letters with at least 14 characters</p>
 					</div>
-                    <br>
                     <div class="form-group">
-						<label><strong>Email</strong></label>
+						<label><strong>Comfirm Password*</strong></label>
 						<br>
-						<input type="email" class="form-control input-lg">
-					</div>
-                    <br>
-                    <div class="form-group">
-						<label><strong>Handphone No.</strong></label>
-						<br>
-						<input type="email" class="form-control input-lg">
+						<input type="password" class="form-control input-lg">
 					</div>
 				</div>
 				<br>

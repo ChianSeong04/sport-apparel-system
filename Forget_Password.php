@@ -1,35 +1,52 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="UTF-8">
 	<title>Forget Password</title>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-	<link rel="stylesheet" href="assets/css/forget_pass_page.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-</head>
-	<body style="background-color:#eff0f5;">
-		<div>
-			<form id="forget_pass_form">
-			<div id="forget_pass">
-				<div id="container">
-					<div id="title_container">
-					<p id="title">Forget Password </p>
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+   </head>
+<!-- Header -->
+<?php include("header.php") ?>
+<!-- Close Header -->
+<body>
+
+<div class="container mt-5 mb-5 ">
+	<div class="row">
+		<div class="col-6">
+			<h2>FORGET PASSWORD</h2>
+			<form>
+				<div class="form-row">
+					<div class="form-group">
+						<label><strong>Email Address*</strong></label>
+						<br>
+						<input type="email" class="form-control input-lg" id="inputEmail4" placeholder="Enter your email address to reset password">
 					</div>
-					
-						<div>
-							<label id="msg"> Please enter your email address. We will send reset password link into your email.</label>
-							<br>
-							<br>
-							<div>
-							<input type="text" id="email_address" placeholder="Email">
-							</div>
-						</div>
-					<div id="btn_container">
-						<input type="button" value="Submit" id="submit_btn"></input>
-					</div>
-					
 				</div>
-			</div>
+				<br>
+				<div>
+					<button type="submit" class="btn btn-outline-dark">Forget Password</button>
+				</div>
 			</form>
 		</div>
-	</body>
+		<div class="col-6">
+			<img class="login_image rounded" src="images/login_image.jpg">
+		</div>
+	</div>
+</div>
+
+</body>
+<?php include("footer.php") ?>
 </html>

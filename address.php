@@ -52,27 +52,44 @@
             <form>
 				<div class="form-row">
 					<div class="form-group">
-						<label><strong>First Name</strong></label>
+						<label><strong>Address Line 1</strong></label>
 						<br>
 						<input type="text" class="form-control input-lg">
 					</div>
 					<br>
 					<div class="form-group">
-						<label><strong>Last Name</strong></label>
+						<label><strong>Address Line 2</strong></label>
 						<br>
 						<input type="text" class="form-control input-lg">
 					</div>
                     <br>
                     <div class="form-group">
-						<label><strong>Email</strong></label>
+						<label><strong>Contact Number</strong></label>
 						<br>
-						<input type="email" class="form-control input-lg">
+						<input type="text" class="form-control input-lg">
 					</div>
                     <br>
                     <div class="form-group">
-						<label><strong>Handphone No.</strong></label>
+						<label><strong>State</strong></label>
 						<br>
-						<input type="email" class="form-control input-lg">
+						<select class="form-select" aria-label="Default select example">
+                            <option selected>Select State</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+					</div>
+                    <br>
+                    <div class="form-group">
+						<label><strong>Postcode</strong></label>
+						<br>
+						<input type="text" class="form-control input-lg">
+					</div>
+                    <br>
+                    <div class="form-group">
+						<label><strong>City</strong></label>
+						<br>
+						<input type="text" class="form-control input-lg">
 					</div>
 				</div>
 				<br>

@@ -61,9 +61,9 @@
                             <div class="text-align-left align-self-center">
                                 <!--<h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>-->
 								<img src="images/logo.png" width="200" height="200"  alt="" />
-                                <h1 class="h1">Sparta Sport Apperal</h1>
+                                <h1 class="h1">Sparta Sport Apparel</h1>
 								<p>
-								"Sparta Sport Apperal" is a website which provides services for selling well-known brand sport apparel products.
+								"Sparta Sport Apparel" is a website which provides services for selling well-known brand sport apparel products.
 								Our webiste mainly selling sport brand such as Nike, Puma, and Under Armour.
 								</p>
                             </div>
@@ -80,7 +80,7 @@
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left">
                                 <h1 class="h1" style="font-weight:bold">Shop Now!</h1>
-                                <h3 class="h2">Welcome to Sparta Sport Apperal</h3>
+                                <h3 class="h2">Welcome to Sparta Sport Apparel</h3>
 								<p>
 								Register now to join our member! 
 								</p>
@@ -107,15 +107,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="images/womensportswear.jpg" class="rounded-circle img-fluid border"></a>
-                <h5 class="text-center mt-3 mb-3">Women Sport Wear</h5>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            <div class="col-md-6">
+				<div class="position-relative d-flex align-items-end">
+					<a href="#"><img src="images/womensportswear.jpg" class="img-fluid"></a>
+					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
+						<h5 style="font-size:1.5rem;font-style:bold;color:white;">Women Sport Wear</h5>
+						<a class="btn btn-success">Go Shop</a>
+					</div>
+				</div>
             </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="images/mensportswear.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Men Sport Wear</h2>
-                <p class="text-center"><a class="btn btn-success">Go Shop</a></p>
+            <div class="col-md-6">
+				<div class="position-relative d-flex align-items-end">
+					<a href="#"><img src="images/mensportswear.jpg" class="img-fluid"></a>
+					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
+						<h5 style="font-size:1.5rem;font-style:bold;">Men Sport Wear</h5>
+						<a class="btn btn-success">Go Shop</a>
+					</div>
+				</div>
             </div>
         </div>
     </section>
