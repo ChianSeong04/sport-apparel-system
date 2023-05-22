@@ -109,19 +109,19 @@
         <div class="row">
             <div class="col-md-6">
 				<div class="position-relative d-flex align-items-end">
-					<a href="#"><img src="images/womensportswear.jpg" class="img-fluid"></a>
+					<a href="product.php"><img src="images/womensportswear.jpg" class="img-fluid"></a>
 					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
 						<h5 style="font-size:1.5rem;font-style:bold;color:white;">Women Sport Wear</h5>
-						<a class="btn btn-success">Go Shop</a>
+						<a href="product.php" class="btn btn-success">Go Shop</a>
 					</div>
 				</div>
             </div>
             <div class="col-md-6">
 				<div class="position-relative d-flex align-items-end">
-					<a href="#"><img src="images/mensportswear.jpg" class="img-fluid"></a>
+					<a href="product.php"><img src="images/mensportswear.jpg" class="img-fluid"></a>
 					<div class="position-absolute bottom-0 start-0" style="margin-bottom:40px;margin-left:10px;">
 						<h5 style="font-size:1.5rem;font-style:bold;">Men Sport Wear</h5>
-						<a class="btn btn-success">Go Shop</a>
+						<a href="product.php" class="btn btn-success">Go Shop</a>
 					</div>
 				</div>
             </div>
