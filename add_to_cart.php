@@ -87,7 +87,7 @@
                             </tbody>
                         </table>
                         <div class="col text-end mt-2">
-                            <button type="submit" class="btn btn-dark mb-3">Pay Now</button>
+                            <button type="button" class="btn btn-dark mb-3" id="pay_btn">Pay Now</button>
                         </div>
                     </form>
                 </div>
@@ -157,6 +157,9 @@
             }
             ]
         });
+	$('#pay_btn').click(function(){
+   window.location.href='checkout_page.php';
+})
     </script>
     <!-- End Slider Script -->
 
