@@ -54,3 +54,7 @@ Custom Css
   .dropdown-content-personal a:hover {background-color: #f1f1f1;}
   .dropdown-personal:hover .dropdown-content-personal {display: block;}
   .dropdown-personal:hover .dropbtn-personal {background-color: #3e8e41;}
+
+  #product_name_hyperlink_style{
+	color: #111;
+  }

@@ -102,7 +102,7 @@ body, ul, li, p, a, label, input, div {
   visibility: visible;
   opacity: 1;
 }
-.card.product-wap a { color: #000;}
+.card.product-wap a { color: #ffffff;}
 #carousel-related-product .slick-slide:focus { outline: none !important;}
 #carousel-related-product .slick-dots li button:before {
   font-size: 15px;

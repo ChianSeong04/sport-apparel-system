@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Product Listing Page</title>
+    <title>Product Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -115,14 +115,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -133,16 +131,7 @@
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
                                     </li>
                                 </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                    </li>
-                                </ul>
-                                <p class="text-center mb-0">$250.00</p>
+                                <p class="text-center mb-0">RM 250.00</p>
                             </div>
                         </div>
                     </div>
@@ -152,14 +141,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_02.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -168,15 +155,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -189,14 +167,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_03.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -205,15 +181,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -226,14 +193,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_04.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
                                         <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -242,15 +207,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -263,14 +219,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_05.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                      <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -279,15 +233,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -300,14 +245,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_06.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -316,15 +259,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -337,14 +271,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_07.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -353,15 +285,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -374,14 +297,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -390,15 +311,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
@@ -411,14 +323,12 @@
                                 <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.jpg">
                                 <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
                                     <ul class="list-unstyled">
-                                        <li><a class="btn btn-success text-white" href="product_details.php"><i class="far fa-heart"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
-                                        <li><a class="btn btn-success text-white mt-2" href="product_details.php"><i class="fas fa-cart-plus"></i></a></li>
+                                        <li><a class="btn btn-success mt-2" href="product_details.php"><i class="far fa-eye"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <a href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
+                                <a id="product_name_hyperlink_style" href="product_details.php" class="h3 text-decoration-none">Oupidatat non</a>
                                 <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
                                     <li>M/L/X/XL</li>
                                     <li class="pt-2">
@@ -427,15 +337,6 @@
                                         <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
                                         <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
-                                    </li>
-                                </ul>
-                                <ul class="list-unstyled d-flex justify-content-center mb-1">
-                                    <li>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-warning fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
-                                        <i class="text-muted fa fa-star"></i>
                                     </li>
                                 </ul>
                                 <p class="text-center mb-0">$250.00</p>
