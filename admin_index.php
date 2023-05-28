@@ -112,11 +112,7 @@
 		<div class="page-wrapper">
 			<div class="content container-fluid">
 				<div class="page-header">
-					<div class="row">
-						<div class="col-sm-12 mt-5">
-							<h3 class="page-title mt-3">Admin Dashboard</h3>
-						</div>
-					</div>
+					<h3 class="mt-5">Admin Dashboard</h3>
 				</div>
 				<div class="row">
 					<div class="col-4">
@@ -180,9 +176,9 @@
 						</div>
 					</div>
 				</div>
-					<h3 class="ml-3">Order</h3>
+					<h3 class="">Order</h3>
 					<div>
-						<table id="index_table" class="table table-striped table-bordered table-hover ml-3">
+						<table id="index_table" class="table table-striped table-bordered table-hover">
 							<thead>
 								<th>Order ID</th>
 								<th>Customer ID</th>
@@ -204,15 +200,15 @@
 									{
 							?>
 								<tr>
-									<td style="text-align:center;"><?php echo $row['order_id'] ?></td>
-									<td style="text-align:center;"><?php echo $row['customer_id'] ?></td>
-									<td style="text-align:center;"><?php echo $row['product_id'] ?></td>
-									<td style="text-align:center;"><?php echo $row['product_quantity'] ?></td>
-									<td style="text-align:center;">RM <?php echo $row['cart_subtotal'] ?></td>
-									<td style="text-align:center;"><?php echo $row['payment_type'] ?></td>
-									<td style="text-align:center;">RM <?php echo $row['grandtotal'] ?></td>
-									<td style="text-align:center;"><?php echo $row['order_date'] ?></td>
-									<td style="text-align:center;"><?php echo $row['order_status'] ?></td>
+									<td><?php echo $row['order_id'] ?></td>
+									<td><?php echo $row['customer_id'] ?></td>
+									<td><?php echo $row['product_id'] ?></td>
+									<td><?php echo $row['product_quantity'] ?></td>
+									<td>RM <?php echo $row['cart_subtotal'] ?></td>
+									<td><?php echo $row['payment_type'] ?></td>
+									<td>RM <?php echo $row['grandtotal'] ?></td>
+									<td><?php echo $row['order_date'] ?></td>
+									<td><?php echo $row['order_status'] ?></td>
 								</tr>
 							<?php
 									}
