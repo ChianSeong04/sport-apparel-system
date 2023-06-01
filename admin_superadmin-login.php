@@ -10,8 +10,10 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/admin_styles/admin_style.css">
 	<link rel="stylesheet" href="assets/admin_styles/bootstrap.min.css">
+	<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="package/dist/sweetalert2.all.min.js"></script>
    </head>
 <body>
   <div class="container">
@@ -81,11 +83,18 @@
 				$_SESSION["id"] = $row["admin_id"]; 
 			?>
 			<script>
-				alert("Login Successfully.");
+				Swal.fire({
+				icon: 'success',
+				title: 'Login Successfully',
+				showConfirmButton: true,
+				confirmButtonText: 'OK'
+				}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.replace("admin_index.php");
+				}
+				})
 			</script>
-
 <?php
-				header("refresh:0.1; url=admin_index.php");
 			}
 		}
 			else
@@ -146,11 +155,19 @@
 				$_SESSION["id"] = $row["superadmin_id"]; 
 			?>
 			<script>
-				alert("Login Successfully.");
+				Swal.fire({
+				icon: 'success',
+				title: 'Login Successfully',
+				showConfirmButton: true,
+				confirmButtonText: 'OK'
+				}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.replace("superadmin_index.php");
+				}
+				})
 			</script>
 
 <?php
-				header("refresh:0.1; url=superadmin_index.php");
 			}
 		}
 			else
