@@ -79,14 +79,13 @@ $error="";
 					<div class="form-group">
 						<label><strong>Email Address*</strong></label>
 						<br>
-						<input type="email" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php if(isset($_POST['useremail'])) { echo $_POST['useremail']; } ?>">
 						<input type="email" name="useremail" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php echo isset($_POST["useremail"]) ? $_POST["useremail"] : ''; ?>">
 					</div>
 					<br>
 					<div class="form-group">
 						<label><strong>Password*</strong></label>
 						<br>
-						<input type="password" class="form-control" id="inputPassword4" placeholder="Password" value="<?php if(isset($_POST['userpass'])) { echo $_POST['userpass']; } ?>">
+						<input type="password" name="userpass" class="form-control" id="inputPassword4" placeholder="Password" value="<?php if(isset($_POST['userpass'])) { echo $_POST['userpass']; } ?>">
 						<span style="color:red;"><?php echo $error ?> </span>
 					</div>
 				</div>
