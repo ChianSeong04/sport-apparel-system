@@ -5,7 +5,7 @@ session_start();
 $error="";
 		if(isset($_POST["sendbtn"])){
 			if(empty($_POST["useremail"]) || empty($_POST["userpass"])){
-					$error="Useremail or Password is Empty";
+					$error="User Email or Password is Empty";
 			}
 			else{
 				$email=$_POST["useremail"];
@@ -53,13 +53,6 @@ $error="";
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!-- end menu -->
 
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Free Style Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
 <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
 <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
 
@@ -86,13 +79,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="form-group">
 						<label><strong>Email Address*</strong></label>
 						<br>
+						<input type="email" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php if(isset($_POST['useremail'])) { echo $_POST['useremail']; } ?>">
 						<input type="email" name="useremail" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php echo isset($_POST["useremail"]) ? $_POST["useremail"] : ''; ?>">
 					</div>
 					<br>
 					<div class="form-group">
 						<label><strong>Password*</strong></label>
 						<br>
-						<input type="password" name="userpass" class="form-control" id="inputPassword4" placeholder="Password" value="<?php echo isset($_POST["userpass"]) ? $_POST["userpass"] : ''; ?>">
+						<input type="password" class="form-control" id="inputPassword4" placeholder="Password" value="<?php if(isset($_POST['userpass'])) { echo $_POST['userpass']; } ?>">
 						<span style="color:red;"><?php echo $error ?> </span>
 					</div>
 				</div>

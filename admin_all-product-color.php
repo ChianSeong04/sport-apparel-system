@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="assets/admin_styles/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="assets/admin_styles/style.css"> 
 	<link rel="stylesheet" href="assets/admin_styles/datatables/datatables.min.css" />
+	<script src="package/dist/sweetalert2.all.min.js"></script>
+	<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
 </head>
 <body>
 	<div class="main-wrapper">

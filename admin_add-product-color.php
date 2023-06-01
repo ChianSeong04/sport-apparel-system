@@ -7,7 +7,10 @@
 	<link rel="stylesheet" href="assets/admin_styles/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/admin_styles/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="assets/admin_styles/fontawesome/css/all.min.css">
-	<link rel="stylesheet" href="assets/admin_styles/style.css"> </head>
+	<link rel="stylesheet" href="assets/admin_styles/style.css"> 
+	<script src="package/dist/sweetalert2.all.min.js"></script>
+	<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
+</head>
 
 <body>
 	<div class="main-wrapper">
@@ -18,62 +21,69 @@
 			
 			<a href="admin_logout.php" class="logout" >Log Out</a>
 			<?php
-		session_start();
-		include("session_connect.php");
-		
-		if(!isset($_SESSION['id']))
-		{
+				session_start();
+				include("session_connect.php");
+				if(!isset($_SESSION['id']))
+				{
 			?>
 				<script>
-				alert("Please Log In!");
+					lert("Please Log In!");
 				</script>
-		<?php
-			header("refresh:0.2; url=admin_superadmin-login.php");
-			exit();
-		}
-	
-?>					
-		<?php
-	if(isset($_POST["save_product_type"]))
-	{
-		
-		$checking=0;
-		$check=0;
-		$product_color=$_POST["product_color"];
-		
-		$validation=mysqli_query($connect,"SELECT *FROM product_color");
-		while($row = mysqli_fetch_assoc($validation))
-		{
-		if(strtolower($row['product_color']) == strtolower($product_color))
-		{
+			<?php
+					header("refresh:0.2; url=admin_superadmin-login.php");
+					exit();
+				}
+			?>					
+			<?php
+				if(isset($_POST["save_product_type"]))
+				{
+					$checking=0;
+					$check=0;
+					$product_color=$_POST["product_color"];
+					
+					$validation=mysqli_query($connect,"SELECT *FROM product_color");
+					while($row = mysqli_fetch_assoc($validation))
+					{
+					if(strtolower($row['product_color']) == strtolower($product_color))
+					{
 			?>
-<script>
-alert("Product color exist.Please try again.");
-
-</script>
-<?php
-	$checking=1;
-		}
-	}
-
-	if($checking==0)
-	{
-		$check=mysqli_query($connect,"INSERT INTO product_color(product_color) VALUES ('$product_color')");
-	}
-			if($check)
-			{
-	?>
 				<script>
-				alert("Save Successfully.");
+					Swal.fire({
+					icon: 'error',
+					title: 'Product color exist.',
+					showConfirmButton: true,
+					confirmButtonText: 'OK'
+					})
 				</script>
-<?php
-				header("refresh:0.2; url=admin_all-product-color.php");
+			<?php
+				$checking=1;
+					}
+				}
+
+				if($checking==0)
+				{
+					$check=mysqli_query($connect,"INSERT INTO product_color(product_color) VALUES ('$product_color')");
+				}
+					if($check)
+					{
+			?>
+				<script>
+					Swal.fire({
+					icon: 'success',
+					title: 'Product Color Add Successfully',
+					showConfirmButton: true,
+					confirmButtonText: 'OK'
+					}).then((result) => {
+					if (result.isConfirmed) {
+						window.location.replace("admin_all-product-color.php");
+					}
+					})
+				</script>
+			<?php
+					}
 			}
-}
-	
-	
-mysqli_close($connect);
-?>	
+			mysqli_close($connect);
+			?>	
 		</div>
 <div class="sidebar" id="sidebar">
 
@@ -172,7 +182,6 @@ mysqli_close($connect);
 							</div>
 						
 				<input  type="submit" class="btn btn-primary buttonedit ml-2" name="save_product_type" value="Save">
-				<button type="button" class="btn btn-primary buttonedit">Cancel</button>
 				<a href="admin_all-product-color.php" class="btn btn-secondary">Back</a>
 						</form>
 					</div>
