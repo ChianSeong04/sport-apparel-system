@@ -10,7 +10,6 @@ $error="";
 			else{
 				$email=$_POST["useremail"];
 				$pass=$_POST["userpass"];
-
 				$email=mysqli_real_escape_string($connect,$email);
 				$pass=mysqli_real_escape_string($connect,$pass);
 				//escape special characters
@@ -47,17 +46,6 @@ $error="";
 <head>
 <title>Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
-<script type="text/javascript">
-					jQuery(document).ready(function($) {
-						$(".scroll").click(function(event){		
-							event.preventDefault();
-							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-						});
-					});
-				</script>	
 <!-- start menu -->
 <script src="js/simpleCart.min.js"> </script>
 <link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
@@ -93,25 +81,25 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="row">
 		<div class="col-6">
 			<h2>LOGIN</h2>
-			<form>
+			<form method="post" autocomplete="off">
 				<div class="form-row">
 					<div class="form-group">
 						<label><strong>Email Address*</strong></label>
 						<br>
-						<input type="email" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php echo isset($_POST["useremail"]) ? $_POST["useremail"] : ''; ?>">
+						<input type="email" name="useremail" class="form-control input-lg" id="inputEmail4" placeholder="Email" value="<?php echo isset($_POST["useremail"]) ? $_POST["useremail"] : ''; ?>">
 					</div>
 					<br>
 					<div class="form-group">
 						<label><strong>Password*</strong></label>
 						<br>
-						<input type="password" class="form-control" id="inputPassword4" placeholder="Password" value="<?php echo isset($_POST["userpass"]) ? $_POST["userpass"] : ''; ?>">
+						<input type="password" name="userpass" class="form-control" id="inputPassword4" placeholder="Password" value="<?php echo isset($_POST["userpass"]) ? $_POST["userpass"] : ''; ?>">
 						<span style="color:red;"><?php echo $error ?> </span>
 					</div>
 				</div>
 				<br>
 				<div>
 					<p><a class="forgot_password" href="forget_password.php">Forgot Your Password?</a></p>
-					<input type="submit" name="sendbtn" class="btn btn-outline-dark" value="Login">
+					<button type="submit" name="sendbtn" class="btn btn-outline-dark" >LOGIN</button>
 					<p class="mt-2">Not a member? <a class="register_link" href="register.php"><strong>Join Us</strong></a></p>
 				</div>
 			</form>
