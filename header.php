@@ -1,4 +1,4 @@
-<!-- Start Top Nav -->
+ <!-- Start Top Nav -->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
@@ -67,20 +67,38 @@
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
                         <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
                     </a>
-                    <div class="dropdown-personal">
-                        <a class="nav-icon position-relative text-decoration-none" href="profile.php">
-                            <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                            Hi, Shawn
-                        </a>
+						
+                    <div class="dropdown-personal">	
+					<?php 
+					if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
+						$user_id=$_SESSION["id"];
+						$result=mysqli_query($connect,
+						"SELECT * FROM customer WHERE customer_id = '$user_id'");
+
+						$row=mysqli_fetch_assoc($result);
+						?>
+						
+                        <i class="fa fa-fw fa-user text-dark mr-3"><a href="profile.php"></i><?php echo $row["customer_first_name"] ?></a>
+                        						
                         <div class="dropdown-content-personal">
                             <a href="profile.php">My Account</a>
                             <a href="purchase_history.php">My Order</a>
                             <a href="logout.php">Log Out</a>
                         </div>
+					
                     </div>
-                    <a class="nav-icon position-relative text-decoration-none" href="user_login.php">
+					
+					<?php
+					}					
+					else{
+					    ?>				
+						<a class="nav-icon position-relative text-decoration-none" href="user_login.php">
                         Login/Register
-                    </a>
+						</a>   
+					<?php
+					}
+					?>
+					
                 </div>
             </div>
 
