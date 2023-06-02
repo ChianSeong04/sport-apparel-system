@@ -1,16 +1,22 @@
+<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
+<script src="package/dist/sweetalert2.all.min.js"></script>
 <?php
-session_start();
-include("session_connect.php");
+	session_start();
+	include("session_connect.php");
 
-unset($_SESSION["id"]); //remove this data
+	unset($_SESSION["id"]); //remove this data
 
-session_destroy();
+	session_destroy();
 ?>
-
 	<script>
-	alert("Log Out Successfully!!");
+		Swal.fire({
+			icon: 'success',
+			title: 'Logout Successfully',
+			showConfirmButton: true,
+			confirmButtonText: 'OK'
+			}).then((result) => {
+			if (result.isConfirmed) {
+				window.location.replace("index.php");
+			}
+			})
 	</script>
-
-<?php
-header("location:index.php");
-?>

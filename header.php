@@ -1,5 +1,5 @@
- <!-- Start Top Nav -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+<!-- Start Top Nav -->
+<nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
                 <div>
@@ -21,16 +21,13 @@
 <link rel="stylesheet" href="assets/css/templatemo.css">
 <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
-
             <!--<a class="navbar-brand text-success logo h1 align-self-center" href="index.html">-->
 			<a class="navbar-brand text-success logo h1 align-self-center" href="index.php">
                 <img src="images/logo.png" width="200" height="150"  alt="" />
             </a>
-
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
@@ -45,7 +42,6 @@
 							<a href="#">Women Sport Wear</a>
 							</div>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link" href="about_us.php">About Us</a>
                         </li>
@@ -60,48 +56,61 @@
                             </div>
                         </div>
                     </div>
-                    <!--<a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
-                    </a>-->
+
                     <a class="nav-icon position-relative text-decoration-none" href="add_to_cart.php">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
-                    </a>
-						
-                    <div class="dropdown-personal">	
-					<?php 
-					if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
-						$user_id=$_SESSION["id"];
-						$result=mysqli_query($connect,
-						"SELECT * FROM customer WHERE customer_id = '$user_id'");
+                    <?php 
+                    if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
+                        $user_id=$_SESSION["id"];
+                        $result=mysqli_query($connect,
+                        "SELECT * FROM customer WHERE customer_id = '$user_id'");
+                        $count_cart= mysqli_query($connect, "SELECT * FROM cart WHERE payment_status='0' AND customer_id='$user_id' ");
 
-						$row=mysqli_fetch_assoc($result);
-						?>
-						
-                        <i class="fa fa-fw fa-user text-dark mr-3"><a href="profile.php"></i><?php echo $row["customer_first_name"] ?></a>
-                        						
-                        <div class="dropdown-content-personal">
-                            <a href="profile.php">My Account</a>
-                            <a href="purchase_history.php">My Order</a>
-                            <a href="logout.php">Log Out</a>
+                        $row=mysqli_fetch_assoc($result);
+                        $cart_total = mysqli_num_rows($count_cart)
+                        ?> 
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"><?php echo $cart_total; ?></span>
+                    <?php
+                    }else{
+                    ?>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>                    
+                    <?php
+                    }
+                    ?>
+                    </a>
+
+                    <?php 
+                    if(isset($_SESSION["id"]) && !empty($_SESSION["id"])){
+                        $user_id=$_SESSION["id"];
+                        $result=mysqli_query($connect,
+                        "SELECT * FROM customer WHERE customer_id = '$user_id'");
+
+                        $row=mysqli_fetch_assoc($result);
+                        ?>
+                        
+                        <div class="dropdown-personal">
+                            <a class="nav-icon position-relative text-decoration-none" href="profile.php">
+                                <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                                Hi, <?php echo $row["customer_first_name"] ?>
+                            </a>
+                            <div class="dropdown-content-personal">
+                                <a href="profile.php">My Account</a>
+                                <a href="purchase_history.php">My Order</a>
+                                <a href="logout.php">Log Out</a>
+                            </div>
                         </div>
-					
-                    </div>
-					
-					<?php
-					}					
-					else{
-					    ?>				
-						<a class="nav-icon position-relative text-decoration-none" href="user_login.php">
-                        Login/Register
-						</a>   
-					<?php
-					}
-					?>
-					
+                    <?php
+                    }else{
+                    ?>
+                            <a class="nav-icon position-relative text-decoration-none" href="user_login.php">
+                                Login/Register
+                            </a>                       
+                    <?php
+                    }
+                    ?>
+
                 </div>
             </div>
-
         </div>
     </nav>
 <!-- top header -->
