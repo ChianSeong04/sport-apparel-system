@@ -1,7 +1,7 @@
-<!--<?php
-include("connection.php");
+<?php
+include("session_connect.php");
 session_start();
-?>-->
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,19 +26,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//fonts-->
 <script type="text/javascript" src="js/move-top.js"></script>
 <script type="text/javascript" src="js/easing.js"></script>
-<!--<script type="text/javascript">
+<script type="text/javascript">
 					jQuery(document).ready(function($) {
 						$(".scroll").click(function(event){		
 							event.preventDefault();
 							$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
 						});
 					});
-				</script>-->	
+				</script>
 <!-- start menu -->
-<!--<script src="js/simpleCart.min.js"> </script>
+<script src="js/simpleCart.min.js"> </script>
 <link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/memenu.js"></script>-->
-<!--<script>$(document).ready(function(){$(".memenu").memenu();});</script>-->	
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
 
 </head>
 <body> 
@@ -54,7 +54,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	</div>
-	<!--<?php 
+	<?php 
 	$email_check="";
 	$hpnum_check="";
 	$pass_check="";
@@ -125,14 +125,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 				<script>swal({title:"Register Successfully!",
 				icon:"success",
-				button:"Login Now"}).then(function(){window.location.href="login.php";}); </script>
+				button:"Login Now"}).then(function(){window.location.href="user_login.php";}); </script>
 
 	<?php
 
 			}
 		}
 	}
-		?>-->
+		?>
 	<!--end-breadcrumbs-->
 	<!--start-account-->
 	<div class="account">
@@ -216,9 +216,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<option value="Terengganu">Terengganu</option>
 					</select>
 		
-								<!--<script type="text/javascript">
+								<script type="text/javascript">
 								document.getElementById('state').value = "<?php echo $_POST['state'];?>";
-								</script>-->
+								</script>
 
 						<label style="margin-top:40px;">By clicking Register, you agree to our Terms and that you have read our Data Use Policy. </label>
 						<span><input type="submit" name="regbtn" value="Register" style="margin-left:140px;margin-top:20px;" > </span>
