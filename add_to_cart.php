@@ -12,11 +12,12 @@ session_start();
 		if (isset($_GET['delete'])) 
 		{
 			$pid=$_GET['id'];
-			$lol=mysqli_query($connect,"DELETE from cart WHERE cart_id='$pid'");
+			$lol=mysqli_query($connect,"DELETE FROM cart WHERE cart_id='$pid'");
 			if($lol)
 			{
 				header("location:add_to_cart.php");
 			}
+
 		}
 	?>
 
@@ -112,9 +113,9 @@ session_start();
                                 </tr>
                             </thead>
 							<?php
-								
 								$grand=0;
 								$lol=$_SESSION["id"];
+								
 								//remove out of stock product
 								mysqli_query($connect,"DELETE cart FROM cart 
 								JOIN customer ON cart.customer_id = customer.customer_id 
@@ -152,7 +153,7 @@ session_start();
                                     <td class="align-middle"><input type="number" name="qty" id="qty"  min="1" max="<?php echo $row['product_stock'] ?>" value="<?php echo $row['product_quantity']; ?>" style="width:80%;" onchange="calsubtotal(<?php echo $row['product_price'] ?>,<?php echo $row['cart_id'] ?>,this.value),caltotal()" ></td>
                                     <td class="align-middle">RM <?php echo $row['product_price']; ?></td>
                                     <td class="align-middle">RM <span id="subtotal-<?php echo $row['cart_id'] ?>"> <?php echo number_format("$subtotal",2); ?></span></td>
-                                    <td class="align-middle"><a class="btn btn-danger" href="checkout.php?delete&id=<?php echo $row['cart_id']; ?>" onclick="return confirmation()">DELETE</a></td>
+                                    <td class="align-middle"><a class="btn btn-danger" href="add_to_cart.php?delete&id=<?php echo $row['cart_id']; ?>" onclick="return confirmation()">DELETE</a></td>
                                 </tr>
                                 <?php
 									$grand+=$subtotal;

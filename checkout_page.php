@@ -8,29 +8,29 @@ session_start();
 <head>
 	<title>Checkout</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+	<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/templatemo.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
 	<link rel="stylesheet" href="assets/css/checkout_page.css">
+	<link rel="stylesheet" href="assets/css/invoice_page.css">
+
 	<!--Sweet Alert Package-->
 	<script src="package/dist/sweetalert2.all.min.js"></script>
 	<script src="package/dist/sweetalert2.min.js"></script>
-	
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-	
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+	<!-- Load fonts style after rendering the layout styles -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	<link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="assets/css/invoice_page.css">
-
+	
 </head>
 	<body>
 		<?php
@@ -53,7 +53,7 @@ session_start();
 		<?php include("header.php") ?>
 		
 		<div id="checkout_cont">
-			<form id="checkout_form">
+			<form id="checkout_form" onsubmit="return validateAndRun();">
 				<div id="container pd-4">					
 						<div class="row gx-3">
 						<!--Left Container-->
@@ -77,7 +77,7 @@ session_start();
 									   JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 0");
 
 										while($table = mysqli_fetch_assoc($cart))
-										  {
+										{
 											
 									?>
 									<div class="row" id="address_container">
@@ -166,7 +166,7 @@ session_start();
 											</div>
 										</div>
 										<div style="display: grid;">
-											<input type="button" value="Place Order" id="order_btn" style="margin:auto;" onclick="show_generate_invoice()">
+											<input type="submit" value="Place Order" id="order_btn" style="margin:auto;" name="place_order" onclick="show_generate_invoice()">
 										</div>
 										
 									</div>
@@ -178,9 +178,8 @@ session_start();
 			</form>
 			
 
-
 <!-- Modal -->
-		<div class="modal fade" id="modal_generate_invoice" tabindex="-1" aria-labelledby="GenerateInvoiceModalLabel" aria-hidden="true">
+		<div class="modal fade" id="modal_generate_invoice" tabindex="-1" aria-labelledby="GenerateInvoiceModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 		  <div class="modal-dialog">
 			<div class="modal-content">
 			  <div class="modal-header">
@@ -191,8 +190,8 @@ session_start();
 				<p>Thank you for your purchasing ! Do you want to generate invoice ?</p>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="calcel_btn">Cancel</button>
-				<button type="button" class="btn btn-primary" id="generate_invoice">Generate</button>
+				<button type="button" name="place_order" class="btn btn-secondary" data-bs-dismiss="modal" id="calcel_btn">Cancel</button>
+				<button type="button" name="place_order" class="btn btn-primary" id="generate_invoice">Generate</button>
 			  </div>
 			</div>
 		  </div>
@@ -200,6 +199,19 @@ session_start();
 
 		</div>	
 		
+<?php
+	$order_date = date("Y-m-d");
+	$status_order = "Paid Out";
+	$payment_method = "Credit Card";
+
+	if(isset($_POST["place_order"]))
+	{
+		$payment_type=mysqli_query($connect,"INSERT INTO payment(payment_type,grandtotal) VALUES ($payment_method,'$gtt')");
+		$create_order=mysqli_query($connect,"INSERT INTO customer_order (customer_id,order_status,payment_id,order_date) VALUES ('$cusid','$status_order',LAST_INSERT_ID(),'$order_date')");
+		$update_cart=mysqli_query($connect,"UPDATE cart SET payment_status=1 WHERE customer_id='$cusid' AND payment_status=0");
+	}
+?>	
+	
 <?php include("footer.php") ?>
 
 <style>
@@ -208,17 +220,101 @@ session_start();
   }
 </style>
 
+
+
 </body>
+
+
+
 <script>
-    function show_generate_invoice() {
-        $("#modal_generate_invoice").modal('show');
-    }
-	$('#calcel_btn').click(function(){
-   window.location.href='index.php';
-})
-	$('#generate_invoice').click(function(){
-   window.location.href='invoice_page.php';
-})
+	
+	function show_generate_invoice()
+	{
+		var card_num = document.getElementById("card_num");
+		var name_on_card = document.getElementById("name_on_card");
+		var expiration = document.getElementById("expiration");
+		var cvv = document.getElementById("cvv");
+		
+		if(!card_num.checkValidity())
+		{
+			console.log("The card number is invalid");
+			if(isErrorMessageDisplayed())
+			{
+				return false;
+			}
+		}
+		else if(!name_on_card.checkValidity())
+		{
+			console.log("The name on card is required");
+			if(isErrorMessageDisplayed())
+			{
+				return false;
+			}
+		}
+		else if(!expiration.checkValidity())
+		{
+			console.log("Please insert valid expiration date");
+			if(isErrorMessageDisplayed())
+			{
+				return false;
+			}
+		}
+		else if(!cvv.checkValidity())
+		{
+			console.log("Please insert valide cvv");
+			if(isErrorMessageDisplayed())
+			{
+				return false;
+			}
+		}
+		else
+		{
+			event.preventDefault();
+			$("#modal_generate_invoice").modal('show');
+		}
+	}
+	
+	$('#calcel_btn').click(function(){window.location.href='index.php';})
+	$('#generate_invoice').click(function(){window.location.href='invoice_page.php';})
+			
+	function isErrorMessageDisplayed()
+	{
+		var card_num = document.getElementById("card_num");
+		var name_on_card = document.getElementById("name_on_card");
+		var expiration = document.getElementById("expiration");
+		var cvv = document.getElementById("cvv");
+		
+		if(card_num.validity.patternMismatch || card_num.validity.valueMissing)
+		{
+			return true;
+		}
+		else if(name_on_card.validity.patternMismatch || name_on_card.validity.valueMissing)
+		{
+			return true;
+		}
+		else if(expiration.validity.patternMismatch || expiration.validity.valueMissing)
+		{
+			return true;
+		}
+		else if(cvv.validity.patternMismatch || cvv.validity.valueMissing)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+		
+	document.getElementById("order_btn").addEventListener("click",function())
+	{
+		var xhr = new XMLHttpRequest();		
+		xhr.open('POST','update.php',true);
+		xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+		xhr.send();
+	}
+	
+	
 
 </script>
 </html>

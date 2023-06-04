@@ -1,5 +1,5 @@
 <?php 
-include("connection.php");
+include("session_connect.php");
 session_start();
 
 $cusid=$_SESSION["id"];

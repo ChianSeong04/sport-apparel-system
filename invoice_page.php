@@ -1,3 +1,8 @@
+<?php
+include("session_connect.php");
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,6 +24,15 @@
 </style>
 </head>
 <body style="background-color:#eff0f5;">
+	
+	<?php
+		$date=date("Y-m-d");
+		$cusid=$_SESSION["id"];
+		$order_ID=mysqli_query($connect,"Select order_id FROM customer_order WHERE customer_id=$cusid AND order_date='$date'");
+		$row1 = mysqli_fetch_assoc($order_ID);
+		$orid = $row1['order_id'];
+	?>
+	
 	<div id="invoice">
 		<div id="container">
 			<div id="first_row">
@@ -39,8 +53,8 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<span>Invoice Date: 15/4/2023<p></p></span>
-						<span>Order Number: SA876283<p></p></span>
+						<span>Invoice Date: <?php echo $date;?><p></p></span>
+						<span>Order Number: SA<?php echo $orid;?><p></p></span>
 						<span>Payment Type: Credit Card<p></p></span>
 					</div>
 				</div>
@@ -51,7 +65,16 @@
 					<div class="col-md-12">
 						<div >
 							<p style="font-weight:900;">Billing Address</p>
-							<p>No.6, Jln Gombak,<br> Taman Gombak, 68100 Taman Gombak,<br> Selangor</p>
+							<?php 
+								$address = mysqli_query($connect,"SELECT delivery_address_line1,delivery_address_line2,state,postcode,city FROM customer_address WHERE customer_id=$cusid"); 
+								$row = mysqli_fetch_assoc($address);
+								$da1 = $row['delivery_address_line1'];
+								$da2 = $row['delivery_address_line2'];
+								$state = $row['state'];
+								$postcode = $row['postcode'];
+								$city = $row['city'];
+							?>
+							<p><?php echo $da1;?>,<br> <?php echo $da2;?>, <?php echo $postcode;?>, <?php echo $city?>,<br> <?php echo $state;?></p>
 						</div>
 					</div>
 
@@ -69,16 +92,35 @@
 					<th>Unit Price(RM) </th>
 					<th>Total(RM) </th>
 				</tr>
+				<?php
+				$counter = 1;
+				$gtt=0;
+				$cart = mysqli_query($connect, "SELECT * FROM cart 
+				JOIN customer ON cart.customer_id = customer.customer_id 
+				JOIN product ON cart.product_id = product.product_id 
+				JOIN product_detail ON product.product_detail_id = product_detail.product_detail_id 
+				JOIN product_color ON product_color.product_color_id = product.product_color_id 
+				JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 1");
+
+				while($table = mysqli_fetch_assoc($cart))
+				{
+					$product_subtotal=$table['cart_subtotal'];
+					$product_id=$table['product_id'];
+					$product_quantity=$table['product_quantity'];
+					//$updatestock=mysqli_query($connect,"UPDATE product SET product_stock = product_stock - '$product_quantity' WHERE product_id = '$product_id'");
+			?>
 					<tr>
-						<td>1.</td>
-						<td>Nike Sportswear Tech Fleece</td>
-						<td>2 </td>
-						<td>349.00 </td>
-						<td>698.00 </td>
-				
-
+						<td><?php echo $counter . '.';?></td>
+						<td><?php echo $table['product_name'];?></td>
+						<td><?php echo $table['product_quantity'];?> </td>
+						<td><?php echo $table['product_price'];?> </td>
+						<td><?php echo $table['cart_subtotal'];?> </td>
 					</tr>
-
+				<?php
+					$counter++; 
+					$gtt=$gtt+$product_subtotal;
+				}
+				?>
 				</table>
 			
 			</div>
@@ -87,7 +129,7 @@
 						<p style="font-weight:700;">Total</p>
 					</div>
 					<div class="col-md-3">
-						<span> <p>RM 698.00 </p> </span>
+						<span> <p>RM  <?php echo number_format((float)$gtt, 2, '.', '') ?></p> </span>
 					</div>
 				</div>
 

@@ -1,7 +1,7 @@
-<?php
-include("session_connect.php");
+<?php include("session_connect.php");
 session_start();
 ?>
+
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
