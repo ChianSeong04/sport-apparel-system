@@ -26,9 +26,11 @@ session_start();
 <body style="background-color:#eff0f5;">
 	
 	<?php
+		$date=date("Y-m-d");
 		$cusid=$_SESSION["id"];
-		$order_date=$_SESSION["date"];
-		$order_ID=mysqli_query($connect,"Select order_id FROM customer_order WHERE customer_id=$cusid AND order_date=$order_date");
+		$order_ID=mysqli_query($connect,"Select order_id FROM customer_order WHERE customer_id=$cusid AND order_date='$date'");
+		$row1 = mysqli_fetch_assoc($order_ID);
+		$orid = $row1['order_id'];
 	?>
 	
 	<div id="invoice">
@@ -51,8 +53,8 @@ session_start();
 						</div>
 					</div>
 					<div class="col-md-4">
-						<span>Invoice Date: <?php echo date("d-m-Y");?><p></p></span>
-						<span>Order Number: SA<?echo $order_ID;?><p></p></span>
+						<span>Invoice Date: <?php echo $date;?><p></p></span>
+						<span>Order Number: SA<?php echo $orid;?><p></p></span>
 						<span>Payment Type: Credit Card<p></p></span>
 					</div>
 				</div>
@@ -64,7 +66,7 @@ session_start();
 						<div >
 							<p style="font-weight:900;">Billing Address</p>
 							<?php 
-								$address = mysqli_query($connection,"SELECT delivery_address_line1,delivery_address_line2,state,postcode,city FROM customer_address WHERE customer_id=$cusid"); 
+								$address = mysqli_query($connect,"SELECT delivery_address_line1,delivery_address_line2,state,postcode,city FROM customer_address WHERE customer_id=$cusid"); 
 								$row = mysqli_fetch_assoc($address);
 								$da1 = $row['delivery_address_line1'];
 								$da2 = $row['delivery_address_line2'];
@@ -98,7 +100,7 @@ session_start();
 				JOIN product ON cart.product_id = product.product_id 
 				JOIN product_detail ON product.product_detail_id = product_detail.product_detail_id 
 				JOIN product_color ON product_color.product_color_id = product.product_color_id 
-				JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 0");
+				JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 1");
 
 				while($table = mysqli_fetch_assoc($cart))
 				{
@@ -117,6 +119,7 @@ session_start();
 				<?php
 					$counter++; 
 					$gtt=$gtt+$product_subtotal;
+				}
 				?>
 				</table>
 			
