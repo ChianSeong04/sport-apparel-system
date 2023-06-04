@@ -216,7 +216,7 @@ if(isset($_POST["order_btn"]))
 {
 	$payment_type=mysqli_query($connect,"INSERT INTO payment(payment_type,grandtotal) VALUES ('Credit Card','$gtt')");
 	$create_order=mysqli_query($connect,"INSERT INTO customer_order (customer_id,order_status,payment_id,order_date) VALUES ('$cusid','$status_order',LAST_INSERT_ID(),'$order_date')");
-	$update_cart=mysqli_query($connect,"UPDATE cart SET payment_status=LAST_INSERT_ID() WHERE customer_id='$cusid' AND payment_status=0");
+	$update_cart=mysqli_query($connect,"UPDATE cart SET payment_status=LAST_INSERT_ID() WHERE customer_id='$cusid' AND payment_status=1");
 }
 ?>
 
