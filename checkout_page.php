@@ -77,7 +77,7 @@ session_start();
 									   JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 0");
 
 										while($table = mysqli_fetch_assoc($cart))
-										  {
+										{
 											
 									?>
 									<div class="row" id="address_container">
@@ -166,7 +166,7 @@ session_start();
 											</div>
 										</div>
 										<div style="display: grid;">
-											<input type="submit" value="Place Order" id="order_btn" style="margin:auto;" name="place_order" onclick="show_generate_invoice(event)">
+											<input type="submit" value="Place Order" id="order_btn" style="margin:auto;" name="place_order" onclick="show_generate_invoice()">
 										</div>
 										
 									</div>
@@ -177,7 +177,6 @@ session_start();
 				</div>
 			</form>
 			
-
 
 <!-- Modal -->
 		<div class="modal fade" id="modal_generate_invoice" tabindex="-1" aria-labelledby="GenerateInvoiceModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
@@ -191,8 +190,8 @@ session_start();
 				<p>Thank you for your purchasing ! Do you want to generate invoice ?</p>
 			  </div>
 			  <div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="calcel_btn">Cancel</button>
-				<button type="button" class="btn btn-primary" id="generate_invoice">Generate</button>
+				<button type="button" name="place_order" class="btn btn-secondary" data-bs-dismiss="modal" id="calcel_btn">Cancel</button>
+				<button type="button" name="place_order" class="btn btn-primary" id="generate_invoice">Generate</button>
 			  </div>
 			</div>
 		  </div>
@@ -200,6 +199,19 @@ session_start();
 
 		</div>	
 		
+<?php
+	$order_date = date("Y-m-d");
+	$status_order = "Paid Out";
+	$payment_method = "Credit Card";
+
+	if(isset($_POST["place_order"]))
+	{
+		$payment_type=mysqli_query($connect,"INSERT INTO payment(payment_type,grandtotal) VALUES ($payment_method,'$gtt')");
+		$create_order=mysqli_query($connect,"INSERT INTO customer_order (customer_id,order_status,payment_id,order_date) VALUES ('$cusid','$status_order',LAST_INSERT_ID(),'$order_date')");
+		$update_cart=mysqli_query($connect,"UPDATE cart SET payment_status=1 WHERE customer_id='$cusid' AND payment_status=0");
+	}
+?>	
+	
 <?php include("footer.php") ?>
 
 <style>
@@ -208,17 +220,7 @@ session_start();
   }
 </style>
 
-<?php
-$order_date = date("Y-m-d");
-$status_order = "Paid Out";
 
-if(isset($_POST["order_btn"]))
-{
-	$payment_type=mysqli_query($connect,"INSERT INTO payment(payment_type,grandtotal) VALUES ('Credit Card','$gtt')");
-	$create_order=mysqli_query($connect,"INSERT INTO customer_order (customer_id,order_status,payment_id,order_date) VALUES ('$cusid','$status_order',LAST_INSERT_ID(),'$order_date')");
-	$update_cart=mysqli_query($connect,"UPDATE cart SET payment_status=LAST_INSERT_ID() WHERE customer_id='$cusid' AND payment_status=1");
-}
-?>
 
 </body>
 
@@ -226,7 +228,7 @@ if(isset($_POST["order_btn"]))
 
 <script>
 	
-	function show_generate_invoice(event)
+	function show_generate_invoice()
 	{
 		var card_num = document.getElementById("card_num");
 		var name_on_card = document.getElementById("name_on_card");
@@ -304,7 +306,13 @@ if(isset($_POST["order_btn"]))
 		}
 	}
 		
-	
+	document.getElementById("order_btn").addEventListener("click",function())
+	{
+		var xhr = new XMLHttpRequest();		
+		xhr.open('POST','update.php',true);
+		xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+		xhr.send();
+	}
 	
 	
 
