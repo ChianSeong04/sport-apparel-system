@@ -100,7 +100,8 @@ session_start();
 				JOIN product ON cart.product_id = product.product_id 
 				JOIN product_detail ON product.product_detail_id = product_detail.product_detail_id 
 				JOIN product_color ON product_color.product_color_id = product.product_color_id 
-				JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 1");
+				JOIN product_size ON product_size.product_size_id = product.product_size_id 
+				JOIN customer_order ON cart.customer_id = customer.customer_id WHERE cart.customer_id='$cusid' AND cart.payment_status = 1 AND customer_order.order_date='$date'");
 
 				while($table = mysqli_fetch_assoc($cart))
 				{
