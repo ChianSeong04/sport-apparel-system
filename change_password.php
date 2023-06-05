@@ -39,7 +39,7 @@ include("header.php");
 		<script>Swal.fire({title:"Please Login First!",
 				text:"You are unable to proceed as a guest",
 				icon:"error",
-				button:"Ok"}	).then(function(){window.location.href="login.php";}); 
+				button:"Ok"}	).then(function(){window.location.href="user_login.php";}); 
 				</script>
 		
 		<?php

@@ -54,7 +54,7 @@ else{
 <script>Swal.fire({title:"Please Register",
 				text:"Your Email Does Not Exists!",
 				icon:"error",
-				button:"OK"}).then(function(){window.location.href="login.php";}); </script>
+				button:"OK"}).then(function(){window.location.href="user_login.php";}); </script>
 	<?php
 }
 } 
