@@ -32,7 +32,7 @@ session_start();
 <?php 
 include("header.php");
 
-			/*if(!isset($_SESSION["id"]))
+			if(!isset($_SESSION["id"]))
 			{
 				?>
 				<script>
@@ -44,7 +44,7 @@ include("header.php");
 				
 				<?php
 				exit();
-			}*/		
+			}		
 		
 $check_phone="";
 $postcode_check="";
@@ -52,7 +52,7 @@ $space1="for spacing purpose";
 $space2="for spacing";
 if(isset($_POST["save_btn"]))
 {
-	$cusid=1;//$_SESSION["id"];
+	$cusid=$_SESSION["id"];
 	$checking=0;
 	$adds1=$_POST["address_1"];
 	$adds2=$_POST["address_2"];
@@ -124,7 +124,7 @@ if(isset($_POST["save_btn"]))
                 </table>
             </div>
 			<?php
-			$cusid=1;//$_SESSION["id"];
+			$cusid=$_SESSION["id"];
 			$result = mysqli_query($connect, "SELECT * FROM customer_address JOIN customer ON customer_address.customer_id = customer.customer_id WHERE customer_address.customer_id='$cusid'");
 			$row = mysqli_fetch_assoc($result);
 			

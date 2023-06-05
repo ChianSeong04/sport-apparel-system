@@ -33,7 +33,7 @@ session_start();
 <?php 
 include("header.php");
 
-	/*if(!isset($_SESSION["id"]))
+	if(!isset($_SESSION["id"]))
 	{
 		?>
 		<script>Swal.fire({title:"Please Login First!",
@@ -44,7 +44,7 @@ include("header.php");
 		
 		<?php
 		exit();
-	}*/
+	}
 	
 $pass_check="";
 $space="";
@@ -52,7 +52,7 @@ $conf_pass_check="";
 $new_pass_check="";
 if(isset($_POST["save_pass_btn"]))
 {
-	$cusid=1;//$_SESSION["id"];
+	$cusid=$_SESSION["id"];
     $checking = 0;
 	$currPass = $_POST["current_pass"];
     $newPass = $_POST["new_pass"];
@@ -121,7 +121,7 @@ if(isset($_POST["save_pass_btn"]))
                 </table>
             </div>
 			<?php
-			$cusid=1;//$_SESSION["id"];
+			$cusid=$_SESSION["id"];
 			$result = mysqli_query($connect, "SELECT * FROM customer WHERE customer_id='$cusid'");
 			$row = mysqli_fetch_assoc($result);
 			?>

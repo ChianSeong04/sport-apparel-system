@@ -28,7 +28,6 @@
    </head>
 <!-- Header -->
 <?php include("header.php");
-echo $_SESSION["email"];
 	
     if(isset($_POST["resetbtn"]))
     {

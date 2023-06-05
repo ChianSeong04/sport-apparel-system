@@ -1,7 +1,7 @@
-<?php include("session_connect.php");
+<?php
+include("session_connect.php");
 session_start();
 ?>
-
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -31,7 +31,7 @@ session_start();
    </head>
 	<!-- Header -->
 		<?php include("header.php");
-			/*if(!isset($_SESSION["id"]))
+			if(!isset($_SESSION["id"]))
 			{
 				?>
 				<script>
@@ -43,13 +43,13 @@ session_start();
 				
 				<?php
 				exit();
-			}*/
+			}
 			
 $phone_check="";
 $space="";
 if(isset($_POST["save_btn"]))
 {
-	$cusid=1;//$_SESSION["id"];
+	$cusid=$_SESSION["id"];
 	$checking=0;
 	$cfname=$_POST["first_name"];
 	$clname=$_POST["last_name"];
@@ -106,7 +106,7 @@ if(isset($_POST["save_btn"]))
             </div>
 			<?php
 			
-			$cusid= 1;//$_SESSION["id"];
+			$cusid= $_SESSION["id"];
 			
 			$result = mysqli_query($connect, "SELECT * FROM customer WHERE customer_id='$cusid'");
 			$row = mysqli_fetch_assoc($result);

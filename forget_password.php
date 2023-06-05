@@ -51,7 +51,7 @@ if(mysqli_num_rows($result) != 0){
 }
 else{
 	?>
-<script>swal({title:"Please Register",
+<script>Swal.fire({title:"Please Register",
 				text:"Your Email Does Not Exists!",
 				icon:"error",
 				button:"OK"}).then(function(){window.location.href="login.php";}); </script>
