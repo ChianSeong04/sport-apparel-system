@@ -28,6 +28,18 @@
    </head>
 <!-- Header -->
 <?php include("header.php");
+		if(!isset($_SESSION["email"]))
+	{
+		?>
+		<script>Swal.fire({title:"Please request for reset password!",
+				text:"You have to request for reset password",
+				icon:"error",
+				button:"Ok"}	).then(function(){window.location.href="forget_password.php";}); 
+				</script>
+		
+		<?php
+		exit();
+	}
 	
     if(isset($_POST["resetbtn"]))
     {
