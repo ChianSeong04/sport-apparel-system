@@ -67,7 +67,7 @@ session_start();
 										?>
 									</h5>
 									<?php
-									   
+									   $counter = 1;
 									   $gtt=0;
 									   $cart = mysqli_query($connect, "SELECT * FROM cart 
 									   JOIN customer ON cart.customer_id = customer.customer_id 
@@ -76,15 +76,21 @@ session_start();
 									   JOIN product_color ON product_color.product_color_id = product.product_color_id 
 									   JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$cusid' AND payment_status = 0");
 
+										$address = mysqli_query($connect,"SELECT delivery_address_line1,delivery_address_line2,state,postcode,city FROM customer_address WHERE customer_id=$cusid");
+										$add_row = mysqli_fetch_assoc($address);
+										$da1 = $add_row['delivery_address_line1'];
+										$da2 = $add_row['delivery_address_line2'];
+										$state = $add_row['state'];
+										$postcode = $add_row['postcode'];
+										$city = $add_row['city'];
+										
 										while($table = mysqli_fetch_assoc($cart))
 										{
 											
 									?>
 									<div class="row" id="address_container">
 										<div class="col-md-12 p-3" style="overflow:hidden;">
-											<select name="address" id="addess_selection">
-													<option value="1">1</option>
-											</select>
+											<p><?php echo $da1;?>, <?php echo $da2;?>, <?php echo $postcode;?>, <?php echo $city;?>, <?php echo $state;?></p>
 										</div>
 									</div>
 									<div class="p-3">
