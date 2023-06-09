@@ -1,3 +1,7 @@
+<?php
+include("session_connect.php");
+session_start();
+?>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/c/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -20,9 +24,77 @@
         <!-- Slick -->
         <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
         <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+		
+		<!--Sweet Alert Package-->
+		<script src="package/dist/sweetalert2.all.min.js"></script>
+		<script src="package/dist/sweetalert2.min.js"></script>
    </head>
 	<!-- Header -->
-		<?php include("header.php") ?>
+<?php 
+include("header.php");
+
+	if(!isset($_SESSION["id"]))
+	{
+		?>
+		<script>Swal.fire({title:"Please Login First!",
+				text:"You are unable to proceed as a guest",
+				icon:"error",
+				button:"Ok"}	).then(function(){window.location.href="user_login.php";}); 
+				</script>
+		
+		<?php
+		exit();
+	}
+	
+$pass_check="";
+$space="";
+$conf_pass_check="";
+$new_pass_check="";
+if(isset($_POST["save_pass_btn"]))
+{
+	$cusid=$_SESSION["id"];
+    $checking = 0;
+	$currPass = $_POST["current_pass"];
+    $newPass = $_POST["new_pass"];
+    $confPass = $_POST["confirm_pass"];
+
+	$getPass=mysqli_query($connect,"SELECT customer_password FROM customer WHERE customer_id='$cusid'");
+    $retPass=mysqli_fetch_assoc($getPass);
+  
+
+    if($currPass != $retPass["customer_password"]){
+        $pass_check = "Your Current Password is Incorrect. Please Try Again";
+		$space="for spacing";
+        $checking=1;
+    }
+    if($newPass != $confPass){
+        $conf_pass_check = "New Password do not match. Please Try Again";
+		$space="for spacing";
+        $checking=1;
+    }
+    if($newPass == $currPass){
+        $new_pass_check = "New Password must not be the same as Current Password.";
+		$space="for spacing";
+        $checking=1;
+    }
+
+	if($checking==0)
+	{
+	mysqli_query($connect,"UPDATE customer SET customer_password = '$newPass'
+												WHERE customer_id='$cusid'; ");
+												?>
+<script>Swal.fire({title:"Password Changed!",
+				icon:"success",
+				button:"Back To My Profile"}	).then(function(){window.location.href="profile.php";}); </script>
+												<?php
+	}	
+}
+
+?>
+		
+		
+		
+		
     <!-- Close Header -->
 
 <body>
@@ -48,31 +120,40 @@
                     </thead>
                 </table>
             </div>
+			<?php
+			$cusid=$_SESSION["id"];
+			$result = mysqli_query($connect, "SELECT * FROM customer WHERE customer_id='$cusid'");
+			$row = mysqli_fetch_assoc($result);
+			?>
             <div class="col-8">
-            <form>
+            <form name="change_pass_form" method="POST" action="" autocomplete="off">
 				<div class="form-row">
 					<div class="form-group">
 						<label><strong>Current Password*</strong></label>
 						<br>
-						<input type="password" class="form-control input-lg">
+						<input type="password" name="current_pass" class="form-control input-lg" value="<?php echo isset($_POST["current_pass"]) ? $_POST["current_pass"] : ''; ?>" required>
+						<span style="color:red;"><?php echo $pass_check;?> </span>
 					</div>
 					<br>
 					<div class="form-group">
 						<label><strong>New Password*</strong></label>
 						<br>
-						<input type="password" class="form-control input-lg">
-                        <p>**Password should consist of a mixture of numbers and both uppercase and lowercase letters with at least 14 characters</p>
+						<input type="password" name="new_pass" class="form-control input-lg" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{14,}" required>
+						<span style="color:red;"><?php echo $new_pass_check;?></span>
+                        <p>*Password should consist of a mixture of numbers and both uppercase and lowercase letters with at least 14 characters</p>
 					</div>
                     <div class="form-group">
 						<label><strong>Comfirm Password*</strong></label>
 						<br>
-						<input type="password" class="form-control input-lg">
+						<input type="password" name="confirm_pass" class="form-control input-lg">
+						<span style="color:red;"><?php echo $conf_pass_check;?></span>
 					</div>
 				</div>
 				<br>
 				<div>
-					<button type="submit" class="btn btn-outline-dark">Save</button>
+					<button type="submit" name="save_pass_btn" class="btn btn-outline-dark">Save</button>
 				</div>
+				
 			</form>
             </div>
         </div>
