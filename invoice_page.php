@@ -26,6 +26,15 @@ $order_date=date("Y-m-d");
 </head>
 
 <body style="background-color:#eff0f5;">
+	
+	<?php
+		$date=date("Y-m-d");
+		$cusid=$_SESSION["id"];
+		$order_ID=mysqli_query($connect,"Select order_id FROM customer_order WHERE customer_id=$cusid AND order_date='$date'");
+		$row1 = mysqli_fetch_assoc($order_ID);
+		$orid = $row1['order_id'];
+	?>
+	
 	<div id="invoice">
 		<div id="container">
 			<div id="first_row">
