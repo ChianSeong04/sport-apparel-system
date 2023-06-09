@@ -186,7 +186,7 @@ session_start();
 						?>
 						<script>
 							window.location.href="checkout_page.php"
-							</script>
+						</script>
 						<?php
 						}
 					}
@@ -273,7 +273,6 @@ function calsubtotal(product_price,cart_id,qty){
 	var cid = cart_id;
 	var price = product_price;
 	var quantity = qty;
-	console.log(cid);
 
 	$.ajax({
 		type:'post',
