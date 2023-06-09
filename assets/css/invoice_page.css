@@ -23,20 +23,6 @@ table
 	border-collapse: collapse;
 }
 
-tr
-{
-	height:50px;
-}
-
-tr:nth-child(odd) 
-{
-    background-color: #f2f2f2;
-}
-
-td
-{
-	padding:5px;
-}
 
 #print_btn{
 	padding: 10px 50px;

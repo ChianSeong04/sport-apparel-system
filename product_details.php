@@ -1,13 +1,16 @@
+<?php
+include("session_connect.php");
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Zay Shop - Product Detail Page</title>
+    <title>Product Detail Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/templatemo.css">
@@ -20,46 +23,34 @@
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-<!--
-    
-TemplateMo 559 Zay Shop
 
-https://templatemo.com/tm-559-zay-shop
-
--->
+    <script src="package/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="package/dist/sweetalert2.min.css">
 </head>
 
 <body>
     <!-- Header -->
     <?php include("header.php") ?>
     <!-- Close Header -->
-
-    <!-- Modal -->
-    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="w-100 pt-1 mb-5 text-right">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <form action="" method="get" class="modal-content modal-body border-0 p-0">
-                <div class="input-group mb-2">
-                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
-                    <button type="submit" class="input-group-text bg-success text-light">
-                        <i class="fa fa-fw fa-search text-white"></i>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-
+    <?php
+		if(isset($_GET["view"]))
+		{
+			$pid =$_GET['id'];
+			$result = mysqli_query($connect, "SELECT product_image,  product_image2, product_image3, product_image4, product_name, product_description, product_price, product_stock, product_color FROM product
+											LEFT JOIN product_detail ON product.product_detail_id = product_detail.product_detail_id
+											LEFT JOIN product_color ON product.product_color_id=product_color.product_color_id
+											WHERE product.product_detail_id='$pid'");
+			$row = mysqli_fetch_assoc($result);
+	?>
     <!-- Open Content -->
     <section class="bg-light">
         <div class="container pb-5">
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="assets/img/product_single_10.jpg" alt="Card image cap" id="product-detail">
+                        <?php
+                        echo '<img class="card-img img-fluid" src="images/'.$row['product_image'].'" alt="Card image cap" id="product-detail">'
+                        ?>
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -80,17 +71,23 @@ https://templatemo.com/tm-559-zay-shop
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_01.jpg" alt="Product Image 1">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image'].'" alt="Product Image 1">'
+                                                ?>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_02.jpg" alt="Product Image 2">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image2'].'" alt="Product Image 2">'
+                                                ?>                                            
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_03.jpg" alt="Product Image 3">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image3'].'" alt="Product Image 3">'
+                                                ?>
                                             </a>
                                         </div>
                                     </div>
@@ -102,44 +99,28 @@ https://templatemo.com/tm-559-zay-shop
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg" alt="Product Image 4">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image4'].'" alt="Product Image 4">'
+                                                ?>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg" alt="Product Image 5">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image'].'" alt="Product Image 1">'
+                                                ?>
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg" alt="Product Image 6">
+                                                <?php
+                                                    echo '<img class="card-img img-fluid" src="images/'.$row['product_image2'].'" alt="Product Image 2">'
+                                                ?>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <!--/.Second slide-->
-
-                                <!--Third slide-->
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg" alt="Product Image 7">
-                                            </a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg" alt="Product Image 8">
-                                            </a>
-                                        </div>
-                                        <div class="col-4">
-                                            <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg" alt="Product Image 9">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.Third slide-->
                             </div>
                             <!--End Slides-->
                         </div>
@@ -158,100 +139,155 @@ https://templatemo.com/tm-559-zay-shop
                 <div class="col-lg-7 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h1 class="h2">Active Wear</h1>
-                            <p class="h3 py-2">$25.00</p>
-                            <p class="py-2">
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
-                            </p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Brand:</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Easy Wear</strong></p>
-                                </li>
-                            </ul>
+                            <h1 class="h2"><?php echo $row['product_name']; ?></h1>
+                            <p class="h3 py-2">RM <?php echo $row['product_price']; ?></p>
 
-                            <h6>Description:</h6>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temp incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse. Donec condimentum elementum convallis. Nunc sed orci a diam ultrices aliquet interdum quis nulla.</p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Avaliable Color :</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>White / Black</strong></p>
-                                </li>
-                            </ul>
+                            <h5>Brand:</h5>
+                            <p>123</p>
 
-                            <h6>Specification:</h6>
-                            <ul class="list-unstyled pb-3">
-                                <li>Lorem ipsum dolor sit</li>
-                                <li>Amet, consectetur</li>
-                                <li>Adipiscing elit,set</li>
-                                <li>Duis aute irure</li>
-                                <li>Ut enim ad minim</li>
-                                <li>Dolore magna aliqua</li>
-                                <li>Excepteur sint</li>
-                            </ul>
+                            <h5>Description:</h5>
+                            <p><?php echo $row['product_description']; ?></p>
 
-                            <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <ul class="list-inline pb-3">
-                                            <li class="list-inline-item">Size :
-                                                <input type="hidden" name="product-size" id="product-size" value="S">
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">S</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">M</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">L</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">XL</span></li>
-                                        </ul>
+                            <form method="post">
+                                <div class="">
+                                    <div class="col-12">
+                                        <h5>Available Colors:</h5>
+                                            <?php 
+                                                $sqlcolor=mysqli_query($connect,"SELECT DISTINCT product_color, product.product_color_id FROM product 
+                                                                                LEFT JOIN product_color ON product.product_color_id = product_color.product_color_id
+                                                                                WHERE product.product_detail_id='$pid' AND product_stock != 0");
+                                            ?>
+                                                <select class="form-select" name="color" id="color" onchange="Fetchcolor(<?php echo $pid ?>,this.value)"> 
+                                                    <option value=""> Select A Color </option>
+                                            <?php
+                                            while($color=mysqli_fetch_assoc($sqlcolor)){
+                                                echo '<option value='.$color['product_color_id'].'>'.$color['product_color'].'</option>';
+                                            }
+                                            ?>
+                                                </select>
                                     </div>
-                                    <div class="col-auto">
-                                        <ul class="list-inline pb-3">
-                                            <li class="list-inline-item text-right">
-                                                Quantity
-                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
-                                        </ul>
+                                    <br>
+                                    <div class="col-12">
+                                        <h5>Size:</h5>
+                                            <select class="form-select" name="size" id="size" onchange="getStock(<?php echo $pid ?>)"> 
+                                                <option value=""> Select A Size </option>
+                                            </select>
+                                    </div>
+                                    <br>
+                                    <div class="col-12">
+                                        <h5>Quantity:</h5>
+                                        <input type="number" id="stock" min="1" value="1" name="qty">
                                     </div>
                                 </div>
+                                <br>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Buy</button>
-                                    </div>
-                                    <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                        <button type="submit" class="btn btn-success btn-lg" name="add" value="addtocard">Add To Cart</button>
                                     </div>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <?php
+        }
+        if(isset($_POST["add"]))
+		{
+			$cusid=$_SESSION["id"];
+			$pprice=$row['product_price'];
+			$pcolor=$_POST["color"];
+			$psize=$_POST["size"];
+			$pqty=$_POST["qty"];
+			$pstatus=0;
+			$subtotal=$pprice*$pqty;
+			
+			if(empty($cusid)){
+				?>
+				<script>
+                Swal.fire({
+                    title:"Please Login First!",
+                    text:"You are unable to proceed as a guest",
+                    icon:"error",
+                    button:"Ok"}	
+                    ); 
+				</script>
+				<?php
+			}else if(empty($pcolor) || empty($psize) ){
+				?>
+				<script>
+                Swal.fire({
+                title:"Please Select a Color and Size!",
+				icon:"error",
+				button:"Ok"}	
+                ); 
+				</script>
+				<?php
+			}else{
+
+			$proid=mysqli_query($connect, "SELECT  product_id FROM product 
+											WHERE product_detail_id='$pid' AND product_color_id = '$pcolor' AND product_size_id='$psize'");
+			
+			$pdid=mysqli_fetch_assoc($proid);
+			foreach($pdid as $ppdid){
+			}
+			$checkid=mysqli_query($connect,"SELECT * FROM cart WHERE product_id = '$ppdid' AND payment_status = 0");
+			if(mysqli_num_rows($checkid)==0){
+			$cart=mysqli_query($connect,"INSERT INTO cart(cart_subtotal, product_quantity, customer_id, product_id, payment_status) 
+											VALUES ('$subtotal', '$pqty', '$cusid', '$ppdid', '$pstatus') ");
+			
+			}else{
+				$cart=mysqli_query($connect,"UPDATE cart SET product_quantity = product_quantity + '$pqty', cart_subtotal = cart_subtotal + '$subtotal' WHERE payment_status=0");
+			}
+			?>
+				<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+				<script>
+				function productpage()
+				{window.location.href="product.php"; }
+				function cartpage(){
+					window.location.href="add_to_cart.php";
+				}
+				swal({
+							title:"Add To Cart Successfully!",
+							icon:"success",
+							buttons: {
+								View_My_Cart: {
+								value: "cart"
+								},
+								Continue_Shopping: {value: "product"},
+							},
+							})
+							.then((value) => {
+							switch (value) {
+							
+								case "product":
+									 productpage();
+								break;
+							
+								case "cart":
+									 cartpage();	
+								break;
+							
+								default:
+								cartpage();							}
+							});
+				</script>
+			<?php
+				} //end of add to cart
+		} //end of post
+        ?>
     </section>
     <!-- Close Content -->
 
     <!-- Start Article -->
-    <section class="py-5">
+    <!-- <section class="py-5">
         <div class="container">
-            <!--div class="row text-left p-2 pb-3">
+            <div class="row text-left p-2 pb-3">
                 <h4>Related Products</h4>
-            </div-->
+            </div
 
-            <!--Start Carousel Wrapper-->
-            <!--div id="carousel-related-product">
+            <div id="carousel-related-product">
 
                 <div class="p-2 pb-3">
                     <div class="product-wap card rounded-0">
@@ -708,12 +744,9 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                     </div>
                 </div>
-
-            </div-->
-
-
+            </div>
         </div>
-    </section>
+    </section> -->
     <!-- End Article -->
 
     <!-- Start Script -->
@@ -726,6 +759,8 @@ https://templatemo.com/tm-559-zay-shop
 
     <!-- Start Slider Script -->
     <script src="assets/js/slick.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <script>
         $('#carousel-related-product').slick({
             infinite: true,
@@ -756,6 +791,42 @@ https://templatemo.com/tm-559-zay-shop
                 }
             ]
         });
+        function Fetchcolor(pid, dcolor){
+            $('#size').html('');
+            var dataToSend= "pid="+pid+"&dcolor="+dcolor;
+            $.ajax({
+                type:'post',
+                url:'size_onchange.php',
+                data: dataToSend,
+                success:function(data){
+                    $('#size').html(data);
+                }
+            });
+        }
+
+        function getStock(pid){
+            var color=document.getElementById('color').value;
+            var size= document.getElementById('size').value;
+            var productID= <?php echo $pid ?>;
+            console.log(color);
+            console.log(size);
+
+            $.ajax({
+                type:'post',
+                url:'stock_onchange.php',
+                data: {
+                    product_color_id:color,
+                    product_size_id:size,
+                    product_id:productID	
+                },
+                success:function(data){
+                document.getElementById("stock").max=data;
+                document.getElementById("stock").value=1;
+                    console.log(data);
+                    
+                }
+            })
+        }
     </script>
     <!-- End Slider Script -->
 

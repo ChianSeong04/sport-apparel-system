@@ -1,9 +1,31 @@
-<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
-<script src="package/dist/sweetalert2.all.min.js"></script>
-<?php 
+<?php
 include("session_connect.php"); 
 session_start(); 
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/templatemo.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+	<!-- Load fonts style after rendering the layout styles -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+	<link rel="stylesheet" href="assets/css/fontawesome.min.css">
+	<!-- Sweet Alert 2-->
+	<link rel="stylesheet" href="package/dist/sweetalert2.min.css">
+	<script src="package/dist/sweetalert2.all.min.js"></script>
+	</head>
 
+	<!-- Header -->
+	<?php include("header.php") ?>
+	<!-- Close Header -->
+	
+	<body>
+	<?php
 	$error="";
 		if(isset($_POST["sendbtn"])){
 			if(empty($_POST["useremail"]) || empty($_POST["userpass"])){
@@ -56,28 +78,6 @@ session_start();
 			
 		}
 	?>
-<!DOCTYPE html>
-<html>
-	<head>
-	<title>Login</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-	<link rel="shortcut icon" type="image/x-icon" href="images/logo.png">
-
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/templatemo.css">
-	<link rel="stylesheet" href="assets/css/custom.css">
-	<!-- Load fonts style after rendering the layout styles -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-	<link rel="stylesheet" href="assets/css/fontawesome.min.css">
-
-	</head>
-	<!-- Header -->
-	<?php include("header.php") ?>
-	<!-- Close Header -->
-	<body>
-
 	<div class="container mt-5 mb-5 ">
 		<div class="row">
 			<div class="col-6">
