@@ -46,9 +46,6 @@
         $newpass=$_POST["new_pass"];
         $conpass=$_POST["confirm_pass"];
         $email=$_SESSION["email"];
-		echo $newpass;
-		echo $conpass;
-		echo $email;
         if($newpass != $conpass)
         {
             ?>

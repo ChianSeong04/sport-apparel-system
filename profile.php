@@ -53,7 +53,6 @@ if(isset($_POST["save_btn"]))
 	$checking=0;
 	$cfname=$_POST["first_name"];
 	$clname=$_POST["last_name"];
-	$cemail=$_POST["email"];
 	$chandp=$_POST["hp_num"];
 
 			$phone_number=strlen($chandp);
@@ -129,7 +128,7 @@ if(isset($_POST["save_btn"]))
                     <div class="form-group">
 						<label><strong>Email</strong></label>
 						<br>
-						<input type="email" name="email" class="form-control input-lg" value="<?php echo $row['customer_email'];  ?>" required>
+						<input type="email" name="email" class="form-control input-lg" value="<?php echo $row['customer_email'];  ?>" readonly>
 					</div>
                     <br>
                     <div class="form-group">
