@@ -23,7 +23,7 @@
 	<div class="forms">
 		<div class="form-content">
 			<div class="login-form">
-			  <div class="title">Superdmin Forget Password</div>
+			  <div class="title">Superdmin Forgot Password</div>
 			  <form method="post" autocomplete="off">
 				<div class="input-boxes">
 				  <div class="input-box">

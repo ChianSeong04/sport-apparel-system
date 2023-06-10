@@ -106,7 +106,6 @@ $email_check="";
 <a href="#"><i class="fas fa-file-invoice"></i><span> Orders </span> <span class="menu-arrow"></span></a>
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-order.php">All Orders </a></li>
-<li><a href="admin_edit-order.php"> Edit Orders </a></li>
 </ul>
 </li>
  
@@ -115,7 +114,6 @@ $email_check="";
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-color.php">All Product Colour</a></li>
 <li><a href="admin_add-product-color.php">Add Product Colour</a></li>
-<li><a href="admin_edit-product-color.php">Edit Product Colour</a></li>
 </ul>
 </li>
 
@@ -124,7 +122,6 @@ $email_check="";
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-type.php">All Product Type</a></li>
 <li><a href="admin_add-product-type.php">Add Product Type</a></li>
-<li><a href="admin_edit-product-type.php">Edit Product Type</a></li>
 </ul>
 </li>
 <li class="submenu" >
@@ -132,7 +129,6 @@ $email_check="";
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-brand.php">All Product Brand</a></li>
 <li><a href="admin_add-product-brand.php">Add Product Brand</a></li>
-<li><a href="admin_edit-product-brand.php">Edit Product Brand</a></li>
 </ul>
 </li>
 
@@ -141,7 +137,6 @@ $email_check="";
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product.php">All Product </a></li>
 <li><a href="admin_add-product.php">Add Product</a></li>
-<li><a href="admin_edit-product.php">Edit Product</a></li>
 </ul>
 </li>
 
@@ -230,7 +225,6 @@ $email_check="";
 								</div>
 
 				<input  type="submit" class="btn btn-primary buttonedit ml-2" name="save_product" value="Save">
-				<button type="button" class="btn btn-primary buttonedit">Cancel</button>
 				<a href="admin_profile.php" class="btn btn-secondary">Back</a>
 						</form>
 				<?php

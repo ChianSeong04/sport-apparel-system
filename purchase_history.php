@@ -1,3 +1,7 @@
+<?php
+include("session_connect.php");
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -29,94 +33,50 @@
 	<?php include("header.php") ?>
 	<div style="background-color:#eff0f5; padding: 5% 0%; min-height:100vh;">
 		<div id="purchase">
-		<h4>All Purchase</h4>
-			<div class="p-3" >
-				<div class="row">
-					<div class="col-md-2">
-						<h5 id="item"> Item</h5>
-					</div>
-					<div class="col-md-6">
-						<h5 id="item_name"> Item Name</h5>
-					</div>
-					<div class="col-md-2">
-						<h5 id="item_qty"> Quantity</h5>
-					</div>
-					<div class="col-md-2">
-						<h5 id="total_prod_price"> Total Price</h5>
-					</div>
-
-					
-				</div>
-				<div id="product_container">
-					<div class="row">
-		
-						<div class="col-md-2">
-							<img src="images/Nike Sportswear Tech Fleece.jfif" width="80px" height="80px">
-						</div>							
-						<div class="col-md-6">
-							<span id="prod_title"><p>Nike Sportswear Tech Fleece</p>
-
-						</div>	
-						<div class="col-md-2">
-							<span>x 1</span>
-						</div>
-						<div class="col-md-2">
-							<span>RM 349</span>
-						</div>
-							
-
-						
-					</div>
-					<div class="row extra1" id="extend">
-							<h5>Order ID </h5>
-							<p class="details">A878287</p>
-							<h5>Order Date </h5>
-							<p class="details">15/4/2023</p>
-							<h5>Product Status </h5>
-							<p id="product_status"> Pending</p>
-							<h5>Payment Method </h5>
-							<p class="details">Credit/Debit</p>
-
-					</div>
-					<div class="button_section" id="button_section1">
-						<button type="button" id="show_btn" class="show_btn1" value="1">Show More</button>
-					</div>
-				</div>
-				
-
-			</div>
-
+			<h4>Purchase History</h4>
+                <table class="table table-hover">
+                    <thead class="table-dark">
+                         <tr>
+							<th style="text-align:center;">Product</th>
+							<th style="text-align:center;">Product Name</th>
+							<th style="text-align:center;">Product Quantity</th>
+							<th style="text-align:center;">Product Price</th>
+							<th style="text-align:center;">Product Subtotal</th>
+							<th style="text-align:center;">Product Status</th>
+							<th style="text-align:center;">Order Date</th>
+							<th style="text-align:center;">Action</th>
+                        </tr>
+                    </thead>
+					<?php
+					$lol=$_SESSION["id"];
+					$result = mysqli_query($connect, "SELECT * FROM cart 
+					JOIN customer ON cart.customer_id = customer.customer_id 
+					JOIN product ON cart.product_id = product.product_id 
+					JOIN product_detail ON product.product_detail_id = product_detail.product_detail_id 
+					JOIN product_color ON product_color.product_color_id = product.product_color_id 
+					JOIN customer_order ON customer_order.order_id = cart.payment_status
+					JOIN product_size ON product_size.product_size_id = product.product_size_id WHERE cart.customer_id='$lol' AND cart.payment_status!=0 ");
+					while($row = mysqli_fetch_assoc($result))
+					{
+					?>
+					<tbody>
+					<tr>
+						<td style="text-align:center; "><?php echo '<img src="images/'.$row['product_image'].'" width="200px" height="200px">';	?></td>
+						<td style="text-align:center; "><?php echo $row['product_name']; ?></td>
+						<td style="text-align:center; "><?php echo $row['product_quantity']; ?></td>
+						<td style="text-align:center; ">RM <?php echo $row['product_price']; ?></td>
+						<td style="text-align:center;">RM <?php echo $row['cart_subtotal']; ?></td>
+						<td style="text-align:center; "><?php echo $row['order_status']; ?></td>
+						<td style="text-align:center; "><?php echo $row['order_date']; ?></td>
+						<td style="text-align:center; "><a href="single.php?view&id=<?php echo $row['product_detail_id']; ?>" class="button">Purchase Again</a></td>
+					</tr>
+					<?php
+					}
+					?>
+					</tbody>
+            </table>
 		</div>
-		</div>
+	</div>
 		<?php include("footer.php") ?>
 	</body>
-	
-<script>
-    window.addEventListener("DOMContentLoaded", function() {
-		$("div#extend").hide();
-		
-		$("body").on("click", "button#show_btn", function(){
-			num = $(this).val();
-			$(".extra"+num).toggle(function(){
-				$(".show_btn"+num).remove();
-				button = '<button type="button" id="hide_btn" class="hide_btn'+num+'" value="'+num+'">Show Less</button>';
-				$("#button_section"+num).append($(button));
-				
-			});
-		});
-		$("body").on("click", "button#hide_btn", function(){
-			num = $(this).val();
-			$(".extra"+num).toggle(function(){
-				$(".hide_btn"+num).remove();
-				button = '<button type="button" id="show_btn" class="show_btn'+num+'" value="'+num+'">Show More</button>';
-				$("#button_section"+num).append($(button));
-				
-			});
-		});
-		
-
-
-	});
-
-</script>
 </html>

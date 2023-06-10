@@ -93,7 +93,6 @@ alert("Product color exist.Please try again.");
 <a href="#"><i class="fas fa-file-invoice"></i><span> Orders </span> <span class="menu-arrow"></span></a>
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-order.php">All Orders </a></li>
-<li><a href="admin_edit-order.php"> Edit Orders </a></li>
 </ul>
 </li>
  
@@ -103,7 +102,6 @@ alert("Product color exist.Please try again.");
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-color.php">All Product Colour</a></li>
 <li><a href="admin_add-product-color.php">Add Product Colour</a></li>
-<li><a href="admin_edit-product-color.php">Edit Product Colour</a></li>
 </ul>
 </li>
 
@@ -112,7 +110,6 @@ alert("Product color exist.Please try again.");
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-type.php">All Product Type</a></li>
 <li><a href="admin_add-product-type.php">Add Product Type</a></li>
-<li><a href="admin_edit-product-type.php">Edit Product Type</a></li>
 </ul>
 </li>
 
@@ -121,7 +118,6 @@ alert("Product color exist.Please try again.");
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product-brand.php">All Product Brand</a></li>
 <li><a href="admin_add-product-brand.php">Add Product Brand</a></li>
-<li><a href="admin_edit-product-brand.php">Edit Product Brand</a></li>
 </ul>
 </li>
 
@@ -130,7 +126,6 @@ alert("Product color exist.Please try again.");
 <ul class="submenu_class" style="display: none;">
 <li><a href="admin_all-product.php">All Product </a></li>
 <li><a href="admin_add-product.php">Add Product</a></li>
-<li><a href="admin_edit-product.php">Edit Product</a></li>
 </ul>
 </li>
 
@@ -155,7 +150,7 @@ alert("Product color exist.Please try again.");
 				<div class="page-header">
 					<div class="row align-items-center">
 						<div class="col">
-							<h3 class="page-title mt-5">Edit Product Color</h3> </div>
+							<h3 class="page-title mt-5">Edit Product Colour</h3> </div>
 					</div>
 				</div>
 				<div class="row">
@@ -171,7 +166,7 @@ alert("Product color exist.Please try again.");
 							<div class="row formtype">
 							<div class="col-md-4">
 									<div class="form-group">
-										<label>Product Color ID</label>
+										<label>Product Colour ID</label>
 
 										<input class="form-control" type="text" name="product_type_id" value="<?php echo $row['product_color_id'] ?>" readonly></div>
 										
@@ -179,16 +174,15 @@ alert("Product color exist.Please try again.");
 								
 								<div class="col-md-4">
 									<div class="form-group">
-										<label>Product Color Name</label>
+										<label>Product Colour Name</label>
 
-										<input class="form-control" type="text" name="product_color" value="<?php echo $row['product_color'] ?>"  required></div>
+										<input class="form-control" type="text" name="product_color" value="<?php echo $row['product_color'] ?>" oninput="this.value=this.value.replace(/[^A-z]/g,'');"  required></div>
 										
 								</div>
 
 							</div>
 							
 							<input  type="submit" class="btn btn-primary buttonedit ml-2" name="product_color_id" value="Save">
-							<button type="button" class="btn btn-primary buttonedit">Cancel</button>
 							<a href="admin_all-product-color.php" class="btn btn-secondary">Back</a>
 							
 						</form>

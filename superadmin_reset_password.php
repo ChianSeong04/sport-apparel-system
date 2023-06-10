@@ -35,7 +35,7 @@
 
                   <div class="input-box">
 					<i class="fas fa-lock"></i>
-					<input class="form-control" type="password" placeholder="Password" name="con_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> 
+					<input class="form-control" type="password" placeholder="Confirmation Password" name="con_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required> 
 				  </div>
 				  <div class="button input-box">
 					<button class="btn btn-primary btn-block btn-dark" type="submit" name="resetbtn">Reset Password</button>

@@ -52,7 +52,6 @@
 						<a href="#"><i class="fas fa-file-invoice"></i><span> Orders </span> <span class="menu-arrow"></span></a>
 						<ul class="submenu_class" style="display: none;">
 							<li><a href="admin_all-order.php">All Orders </a></li>
-							<li><a href="admin_edit-order.php"> Edit Orders </a></li>
 						</ul>
 					</li>
 				
@@ -61,7 +60,6 @@
 						<ul class="submenu_class" style="display: none;">
 							<li><a href="admin_all-product-color.php">All Product Colour</a></li>
 							<li><a href="admin_add-product-color.php">Add Product Colour</a></li>
-							<li><a href="admin_edit-product-color.php">Edit Product Colour</a></li>
 						</ul>
 					</li>
 
@@ -70,7 +68,6 @@
 						<ul class="submenu_class" style="display: none;">
 							<li><a href="admin_all-product-type.php">All Product Type</a></li>
 							<li><a href="admin_add-product-type.php">Add Product Type</a></li>
-							<li><a href="admin_edit-product-type.php">Edit Product Type</a></li>
 						</ul>
 					</li>
 
@@ -79,7 +76,6 @@
 						<ul class="submenu_class" style="display: none;">
 							<li><a href="admin_all-product-brand.php">All Product Brand</a></li>
 							<li><a href="admin_add-product-brand.php">Add Product Brand</a></li>
-							<li><a href="admin_edit-product-brand.php">Edit Product Brand</a></li>
 						</ul>
 					</li>
 
@@ -88,7 +84,6 @@
 						<ul class="submenu_class" style="display: none;">
 							<li><a href="admin_all-product.php">All Product </a></li>
 							<li><a href="admin_add-product.php">Add Product</a></li>
-							<li><a href="admin_edit-product.php">Edit Product</a></li>
 						</ul>
 					</li>
 
@@ -135,12 +130,11 @@
 	<table class="datatable table table-stripped table table-hover table-center mb-0">
 	<thead>
 	<tr style="text-align:center;">
-													<th>Product ID</th>
-													<th>Product Name</th>
-													<th>Product Color</th>
-													<th>Product Size</th>
-													<th>Quantity</th>
-													<th>Total</th>
+	<th>Order ID</th>
+												<th>Customer ID</th>
+												<th>Product Name</th>
+												<th>Quantity</th>
+												<th>Total</th>
 													
 													
 	</tr>
@@ -148,28 +142,26 @@
 	<tbody>
 	<tr>
 									<?php 
-											$detail_res = mysqli_query($connect,"SELECT *,SUM(cart.product_quantity) AS quantity FROM cart 
-											JOIN product ON product.product_id = cart.product_id 
-											JOIN product_detail ON product_detail.product_detail_id = product.product_detail_id
-											JOIN product_color ON product.product_color_id = product_color.product_color_id
-											JOIN product_size ON product.product_size_id = product_size.product_size_id
-											WHERE cart.payment_status!=0 GROUP BY cart.product_id");
-										
-											while($row = mysqli_fetch_assoc($detail_res))
-											{
-												$total=$row['product_price']*$row['quantity'];
-									?>
-												<tr>
-													<td style="text-align:center;"><?php echo  $row['product_id'] ?></td>
-													<td style="text-align:center;"><?php echo $row['product_name'] ?></td>
-													<td style="text-align:center;"><?php echo $row['product_color'] ?></td>
-													<td style="text-align:center;"><?php echo $row['product_size'] ?></td>
-													<td style="text-align:center;"><?php echo $row['quantity'] ?></td>
-													<td style="text-align:center;">RM <?php echo number_format((float)$total, 2, '.', ''); ?></td>
-												</tr>
-									<?php
-											}	
-									?>
+												$result=mysqli_query($connect,"SELECT * from cart 
+												JOIN customer_order ON customer_order.order_id = cart.payment_status
+												JOIN payment ON customer_order.payment_id=payment.payment_id 
+												JOIN product ON product.product_id = cart.product_id 
+												JOIN product_detail ON product_detail.product_detail_id = product.product_detail_id
+												WHERE cart.payment_status!=0  
+												");
+													while($row = mysqli_fetch_assoc($result))
+													{
+											?>
+														<tr>
+															<td style="text-align:center;"><?php echo $row['order_id'] ?></td>
+															<td style="text-align:center;"><?php echo $row['customer_id'] ?></td>
+															<td style="text-align:center;"><?php echo $row['product_name'] ?></td>
+															<td style="text-align:center;"><?php echo $row['product_quantity'] ?></td>
+															<td style="text-align:center;">RM <?php echo $row['cart_subtotal'] ?></td>
+														</tr>
+											<?php
+													}
+											?>
 	</tr>
 	</tbody>
 	</table>

@@ -87,7 +87,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-customer.php"> All customers </a></li>
 <li><a href="superadmin_add-customer.php"> Add customers </a></li>
-<li><a href="superadmin_edit-customer.php"> Edit customers </a></li>
 </ul>
 </li>
 
@@ -96,7 +95,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-admin.php">All Admin</a></li>
 <li><a href="superadmin_add-admin.php">Add Admin</a></li>
-<li><a href="superadmin_edit-admin.php">Edit Admin</a></li>
 
 </ul>
 </li>
@@ -104,7 +102,6 @@
 <a href="#"><i class="fas fa-file-invoice"></i><span> Orders </span> <span class="menu-arrow"></span></a>
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-order.php">All Orders </a></li>
-<li><a href="superadmin_edit-order.php"> Edit Orders </a></li>
 </ul>
 </li>
  
@@ -113,7 +110,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-product-color.php">All Product Colour</a></li>
 <li><a href="superadmin_add-product-color.php">Add Product Colour</a></li>
-<li><a href="superadmin_edit-product-color.php">Edit Product Colour</a></li>
 </ul>
 </li>
 
@@ -122,7 +118,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-product-type.php">All Product Type</a></li>
 <li><a href="superadmin_add-product-type.php">Add Product Type</a></li>
-<li><a href="superadmin_edit-product-type.php">Edit Product Type</a></li>
 </ul>
 </li>
 
@@ -131,7 +126,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-product-brand.php">All Product Brand</a></li>
 <li><a href="superadmin_add-product-brand.php">Add Product Brand</a></li>
-<li><a href="superadmin_edit-product-brand.php">Edit Product Brand</a></li>
 </ul>
 </li>
 
@@ -140,7 +134,6 @@
 <ul class="submenu_class" style="display: none;">
 <li><a href="superadmin_all-product.php">All Product </a></li>
 <li><a href="superadmin_add-product.php">Add Product</a></li>
-<li><a href="superadmin_edit-product.php">Edit Product</a></li>
 </ul>
 </li>
 
@@ -191,13 +184,12 @@
 									<div class="form-group">
 										<label>Product Type Name</label>
 
-										<input class="form-control" type="text" name="product_type_name" value="<?php echo $row['product_type_name'] ?>" required></div>
+										<input class="form-control" type="text" name="product_type_name" value="<?php echo $row['product_type_name'] ?>"   oninput="this.value=this.value.replace(/[^A-z]/g,'');" required></div>
 										
 								</div>
 
 							</div>
 							<input  type="submit" class="btn btn-primary buttonedit ml-2" name="product_type" value="Save">
-				<button type="button" class="btn btn-primary buttonedit">Cancel</button>
 				<a href="superadmin_all-product-type.php" class="btn btn-secondary">Back</a>
 						</form>
 						<?php

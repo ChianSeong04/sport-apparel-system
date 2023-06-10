@@ -49,7 +49,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-customer.php"> All customers </a></li>
 						<li><a href="superadmin_all-customer.php"> Add customers </a></li>
-						<li><a href="superadmin_all-customer.php"> Edit customers </a></li>
 					</ul>
 				</li>
 
@@ -58,7 +57,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-admin.php">All Admin</a></li>
 						<li><a href="superadmin_add-admin.php">Add Admin</a></li>
-						<li><a href="superadmin_edit-admin.php">Edit Admin</a></li>
 					</ul>
 				</li>
 
@@ -66,7 +64,6 @@
 					<a href="#"><i class="fas fa-file-invoice"></i><span> Orders </span> <span class="menu-arrow"></span></a>
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-order.php">All Orders </a></li>
-						<li><a href="superadmin_edit-order.php"> Edit Orders </a></li>
 					</ul>
 				</li>
 				
@@ -75,7 +72,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-product-color.php">All Product Colour</a></li>
 						<li><a href="superadmin_add-product-color.php">Add Product Colour</a></li>
-						<li><a href="superadmin_edit-product-color.php">Edit Product Colour</a></li>
 					</ul>
 				</li>
 
@@ -84,7 +80,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-product-type.php">All Product Type</a></li>
 						<li><a href="superadmin_add-product-type.php">Add Product Type</a></li>
-						<li><a href="superadmin_edit-product-type.php">Edit Product Type</a></li>
 					</ul>
 				</li>
 
@@ -93,7 +88,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-product-brand.php">All Product Brand</a></li>
 						<li><a href="superadmin_add-product-brand.php">Add Product Brand</a></li>
-						<li><a href="superadmin_edit-product-brand.php">Edit Product Brand</a></li>
 					</ul>
 				</li>
 
@@ -102,7 +96,6 @@
 					<ul class="submenu_class" style="display: none;">
 						<li><a href="superadmin_all-product.php">All Product </a></li>
 						<li><a href="superadmin_add-product.php">Add Product</a></li>
-						<li><a href="superadmin_edit-product.php">Edit Product</a></li>
 					</ul>
 				</li>
 
@@ -158,7 +151,7 @@
 								<td><?php echo $row['product_type_name'] ?></td>
 								<td><?php echo $row['product_brand_name'] ?></td>
 								<td>
-									<div class="actions"><a href="superadmin_all-product-detail.php?view&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-info">View</a> <a href="superadmin_edit-product.php?edit&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-info">Edit</a> <a href="superadmin_all-product.php?delete&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-danger" onclick="return confirmation()">Delete</a> </div>
+									<div class="actions"><a href="superadmin_all-product-detail.php?view&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-success">View</a> <a href="superadmin_edit-product.php?edit&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-info">Edit</a> <a href="superadmin_all-product.php?delete&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-danger" onclick="return confirmation()">Delete</a> </div>
 								</td>
 							</tr>
 							<?php
