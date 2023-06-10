@@ -61,14 +61,14 @@ session_start();
 					?>
 					<tbody>
 					<tr>
-						<td style="text-align:center; "><?php echo '<img src="images/'.$row['product_image'].'" width="200px" height="200px">';	?></td>
-						<td style="text-align:center; "><?php echo $row['product_name']; ?></td>
-						<td style="text-align:center; "><?php echo $row['product_quantity']; ?></td>
-						<td style="text-align:center; ">RM <?php echo $row['product_price']; ?></td>
-						<td style="text-align:center;">RM <?php echo $row['cart_subtotal']; ?></td>
-						<td style="text-align:center; "><?php echo $row['order_status']; ?></td>
-						<td style="text-align:center; "><?php echo $row['order_date']; ?></td>
-						<td style="text-align:center; "><a href="single.php?view&id=<?php echo $row['product_detail_id']; ?>" class="button">Purchase Again</a></td>
+						<td class="align-middle" style="text-align:center; "><?php echo '<img src="images/'.$row['product_image'].'" width="200px" height="200px">';	?></td>
+						<td class="align-middle" style="text-align:center; "><?php echo $row['product_name']; ?><br>Variation: (<?php echo $row['product_color']; ?>,<?php echo $row['product_size']; ?>)</span></td>
+						<td class="align-middle" style="text-align:center; "><?php echo $row['product_quantity']; ?></td>
+						<td class="align-middle" style="text-align:center; ">RM <?php echo $row['product_price']; ?></td>
+						<td class="align-middle" style="text-align:center;">RM <?php echo $row['cart_subtotal']; ?></td>
+						<td class="align-middle" style="text-align:center; "><?php echo $row['order_status']; ?></td>
+						<td class="align-middle" style="text-align:center; "><?php echo $row['order_date']; ?></td>
+						<td class="align-middle" style="text-align:center; "><a style="color:white;" href="product_details.php?view&id=<?php echo $row['product_detail_id']; ?>" class="btn btn-warning">Purchase Again</a></td>
 					</tr>
 					<?php
 					}
