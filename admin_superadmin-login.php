@@ -32,6 +32,7 @@
 	include("session_connect.php");
 
 	$error = "";
+	$superadmin_error = "";
 	if(isset($_GET["sendbtn"]))
 	{
 		if(empty($_GET["admin_id"]) && empty($_GET["admin_password"])) //no enter anythings in form
@@ -103,8 +104,7 @@
 			}
 		}
 	}
-	$superadmin_error = "";
-	if(isset($_GET["super_sendbtn"]))
+	else if(isset($_GET["super_sendbtn"]))
 	{
 		if(empty($_GET["superadmin_id"]) && empty($_GET["superadmin_password"])) //no enter anythings in form
 		{
@@ -166,13 +166,12 @@
 				}
 				})
 			</script>
-
 <?php
 			}
 		}
 			else
 			{
-				$error = "ID or Password are invalid.";
+				$superadmin_error = "ID or Password are invalid.";
 			}
 		}
 	}
@@ -183,7 +182,7 @@
 		<div class="form-content">
 			<div class="login-form">
 			  <div class="title">Admin Login</div>
-			  <form autocomplete="off">
+			  <form method="GET" autocomplete="off">
 				<div class="input-boxes">
 				  <div class="input-box">
 					<i class="fas fa-user"></i>
@@ -205,7 +204,7 @@
 		  
 			<div class="signup-form">
 				<div class="title">Superadmin Login</div>
-				<form autocomplete="off">
+				<form method="GET" autocomplete="off">
 					<div class="input-boxes">
 					  <div class="input-box">
 						<i class="fas fa-user"></i>

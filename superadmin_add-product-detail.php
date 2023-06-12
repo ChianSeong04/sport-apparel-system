@@ -129,18 +129,18 @@
 						<form method="post">
 							<div class="row formtype">
                             <?php
-	$pid =$_SESSION['product_detail_id'];
-	$result = mysqli_query($connect, "SELECT * from product_detail
-							WHERE product_detail.product_detail_id='$pid' ");
-		while($row = mysqli_fetch_assoc($result))
-		{
-?>
+								$pid =$_SESSION['product_detail_id'];
+								$result = mysqli_query($connect, "SELECT * from product_detail
+														WHERE product_detail.product_detail_id='$pid' ");
+									while($row = mysqli_fetch_assoc($result))
+									{
+							?>
 
-<div class="col-md-4">
-									<div class="form-group">
+							<div class="col-md-4">
+												<div class="form-group">
 										<label>Product Name</label>
 										<input class="form-control" type="text" name="product_name"  value="<?php echo $row['product_name']; ?>"readonly> </div>
-								</div>
+							</div>
 
 
 								<div class="col-md-4">
@@ -226,7 +226,7 @@ alert("Product detail exist.Please try again.");
 		?>
 					<script>
 					alert("Save Successfully.");
-					
+					window.location="superadmin_all-product-detail.php?view&id=<?php echo $product_detail_id ?>";
 					</script>
 	<?php
 					

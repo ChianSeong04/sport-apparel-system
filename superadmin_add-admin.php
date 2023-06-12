@@ -94,6 +94,7 @@ $phone_check="";
 	?>
 				<script>
 				alert("Add Successfully.");
+				window.location="superadmin_all-admin.php";
 				</script>
 <?php
 				

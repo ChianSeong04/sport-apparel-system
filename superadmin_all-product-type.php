@@ -153,6 +153,12 @@
 								{
 									$pid=$_GET['id'];
 									mysqli_query($connect,"UPDATE product_type SET product_type_status='0' WHERE product_type_id='$pid'");
+							?>
+							<script>
+								alert("Delete Successfully.");
+								window.location="superadmin_all-product-type.php";
+							</script>
+							<?php
 								}
 							?>
 							<script type="text/javascript">

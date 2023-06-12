@@ -213,28 +213,24 @@ $cusid=$_SESSION["id"];
 										<div class="row p-3">
 											<div class="col-md-6">
 												<label>Contact Number</label>
-												<input type="text" value="<?php echo $row12['contact_number']; ?>" readonly></p>
-											</div>
-											<div class="col-md-6">
-												<label>Contact Number</label>
-												<input type="text" value="<?php echo $row12['contact_number']; ?>" readonly></p>
+												<input class="checkout-page" type="text" value="<?php echo $row12['contact_number']; ?>" readonly></p>
 											</div>
 											<div class="col-md-6">
 												<label>Address Line 1</label>
-												<input type="text" value="<?php echo $row12['delivery_address_line1']; ?>" readonly></p>
+												<input class="checkout-page" type="text" value="<?php echo $row12['delivery_address_line1']; ?>" readonly></p>
 											</div>
 											<div class="col-md-6">
 												<label>Address Line 2</label>
-												<input type="text" value="<?php echo $row12['delivery_address_line2']; ?>" readonly></p>
+												<input class="checkout-page" type="text" value="<?php echo $row12['delivery_address_line2']; ?>" readonly></p>
 											</div>
 											<div class="col-md-6">
 												<label>City</label>
-												<input type="text" value="<?php echo $row12['city']; ?>" readonly></p>
+												<input class="checkout-page" type="text" value="<?php echo $row12['city']; ?>" readonly></p>
 											</div>
 											
 											<div class="col-md-6">
 												<label>State</label>
-												<input  type="text" value="<?php echo $row12['postcode']; ?>" readonly></p>
+												<input class="checkout-page" type="text" value="<?php echo $row12['postcode']; ?>" readonly></p>
 											</div>
 										</div>
 										<?php

@@ -216,7 +216,7 @@ alert("Product detail exist.Please try again.");
 		?>
 					<script>
 					alert("Save Successfully.");
-					
+					window.location="admin_all-product-detail.php?view&id=<?php echo $product_detail_id ?>";
 					</script>
 	<?php
 					

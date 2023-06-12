@@ -153,9 +153,10 @@
 									$pid=$_GET['id'];
 									mysqli_query($connect,"UPDATE product_color SET product_color_status='0' WHERE product_color_id='$pid'");
 								?>
-									<script>
-										window.location.href="superadmin_all-product-color.php";
-									</script>
+								<script>
+								alert("Delete Successfully.");
+								window.location="superadmin_all-product-color.php";
+								</script>
 								<?php
 								}
 								?>

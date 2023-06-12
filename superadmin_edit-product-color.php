@@ -66,9 +66,9 @@ alert("Product color exist.Please try again.");
 	?>
 				<script>
 				alert("Save Successfully.");
+				window.location="superadmin_all-product-color.php";
 				</script>
 <?php
-				header("refresh:0.2; url=superadmin_all-product-color.php");
 			}
 		
 	}

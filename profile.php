@@ -67,7 +67,6 @@ if(isset($_POST["save_btn"]))
 	{
 	mysqli_query($connect,"UPDATE customer SET customer_first_name='$cfname',
 												customer_last_name='$clname',
-												customer_email='$cemail',
 												customer_phone_num='$chandp'
 												WHERE customer_id='$cusid'; ");
 												?>

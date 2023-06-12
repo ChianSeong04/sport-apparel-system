@@ -170,6 +170,12 @@
 								$pid=$_GET['id'];
 								mysqli_query($connect,"DELETE from customer WHERE customer_id='$pid'");												
 								mysqli_query($connect,"DELETE from customer_address WHERE customer_id='$pid'");
+						?>
+							<script>
+							alert("Delete Successfully.");
+							window.location="superadmin_all-customer.php";
+							</script>
+						<?php
 							}
 						?>		
 							<script type="text/javascript">

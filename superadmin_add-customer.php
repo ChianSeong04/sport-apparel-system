@@ -101,6 +101,7 @@ $postcode_check="";
 				?>
 							<script>
 							alert("Save Successfully.");
+							window.location="superadmin_all-customer.php";
 							</script>
 			<?php
 							

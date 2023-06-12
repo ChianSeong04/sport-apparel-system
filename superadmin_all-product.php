@@ -160,6 +160,12 @@
 							{
 								$pid=$_GET['id'];
 								mysqli_query($connect,"UPDATE product_detail SET product_status='0' WHERE product_detail_id='$pid'");
+							?>
+								<script>
+								alert("Delete Successfully.");
+								window.location="superadmin_all-product.php";
+								</script>
+							<?php
 							}
 							?>		
 							<script type="text/javascript">
