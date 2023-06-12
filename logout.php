@@ -8,6 +8,7 @@
 
 	session_destroy();
 ?>
+<body>
 	<script>
 		Swal.fire({
 			icon: 'success',
@@ -20,3 +21,4 @@
 			}
 			})
 	</script>
+</body>
