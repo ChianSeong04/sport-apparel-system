@@ -130,7 +130,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-										<label>Product Type Name</label>
+										<label>Product Brand Name</label>
 
 										<input class="form-control" type="text" name="brand_name" value="<?php echo $row['product_brand_name']; ?>" required></div>
 										

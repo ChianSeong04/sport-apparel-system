@@ -24,8 +24,8 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Products</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-						<li><a class="text-decoration-none" href="#">Men Sport Wear</a></li>
-						<li><a class="text-decoration-none" href="#">Women Sport Wear</a></li>
+						<li><a class="text-decoration-none" href="product.php">Men Sport Wear</a></li>
+						<li><a class="text-decoration-none" href="product.php">Women Sport Wear</a></li>
 						
                     </ul>
                 </div>

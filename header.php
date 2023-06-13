@@ -38,8 +38,8 @@
                         <li class="nav-item" id="product_header_selection">
                             <a class="nav-link"  href="product.php">Product</a>
 							<div class="dropdown-content">
-							<a href="#">Men Sport Wear</a>
-							<a href="#">Women Sport Wear</a>
+							<a href="product.php">Men Sport Wear</a>
+							<a href="product.php">Women Sport Wear</a>
 							</div>
                         </li>
                         <li class="nav-item">
