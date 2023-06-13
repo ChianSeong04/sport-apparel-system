@@ -163,6 +163,12 @@
 						{
 							$pid=$_GET['id'];
 							mysqli_query($connect,"DELETE from admin WHERE admin_id='$pid'");
+						?>
+							<script>
+							alert("Delete Successfully.");
+							window.location="superadmin_all-admin.php";
+							</script>
+						<?php
 						}
 					?>		
 						<script type="text/javascript">

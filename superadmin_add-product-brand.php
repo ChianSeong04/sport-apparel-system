@@ -168,6 +168,7 @@ alert("Product brand exist.Please try again.");
 	?>
 				<script>
 				alert("Save Successfully.");
+				window.location="superadmin_all-product-brand.php";
 				</script>
 <?php
 				

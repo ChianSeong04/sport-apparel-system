@@ -184,6 +184,7 @@
 					?>
 						<script>
 					alert("Edit Successfully.");
+					window.location="superadmin_all-product-brand.php";
 					</script>
 			
 				<?php

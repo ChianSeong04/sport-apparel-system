@@ -224,6 +224,7 @@
 					?>
 						<script>
 					alert("Edit Successfully.");
+					window.location="superadmin_all-order.php";
 					</script>
 			
 				<?php

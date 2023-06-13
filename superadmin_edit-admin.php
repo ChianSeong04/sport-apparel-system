@@ -64,6 +64,7 @@ $phone_check="";
 					?>
 						<script>
 					alert("Edit Successfully.");
+					window.location="superadmin_all-admin.php";
 						</script>
 			
 				<?php

@@ -38,7 +38,7 @@
 <?php 
 $phone_check="";
 $email_check="";
-					if(isset($_POST["save_product"]) && isset($_FILES["p_image"]) )
+					if(isset($_POST["save_product"]))
 {
 							$checking=0;
 							$check=0;
@@ -47,11 +47,6 @@ $email_check="";
 							$email=$_POST["admin_email"];
 							$address=$_POST["admin_address"];
 							$id=$_POST["admin_id"];
-
-							$img_name = $_FILES['p_image']['name'];
-							$img_size = $_FILES['p_image']['size'];
-							$tmp_name = $_FILES['p_image']['tmp_name'];
-							$error = $_FILES['p_image']['error'];
 						
 							$phone_number=strlen($phone);
 							if($phone_number<10) //phone number
@@ -68,52 +63,9 @@ $email_check="";
 						}
 	
 
-							if($checking==0)
-						{
-							if ($error === 0) 
-							{
-								if ($img_size > 900000) {
-									$em = "Sorry, your file is too large.";
-								}else 
-								{
-									$img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
-									$img_ex_lc = strtolower($img_ex);
-						
-									$allowed_exs = array("jpg", "jpeg", "png"); 
-						
-									if (in_array($img_ex_lc, $allowed_exs)) {
-										$new_img_name = uniqid("IMG-", true).'.'.$img_ex_lc;
-										$img_upload_path = 'images/superadmin/'.$new_img_name;
-										move_uploaded_file($tmp_name, $img_upload_path);
-						
-										// Insert into Database
-										
-									}else
-									 {
-										
-										?>
-							 <script>
-							alert("You can't upload files of this type");
-							</script>
-					
-					<?php
-									}
-								}
-							}else 
-							{
-					?>
-							 <script>
-							alert("unknown error occurred!");
-							</script>
-				<?php
-			
-							}
-						
-						}
-
 						if($checking==0)
 						{
-							$check=mysqli_query($connect,"UPDATE superadmin SET superadmin_name='$name',superadmin_phone='$phone',superadmin_email='$email',superadmin_address='$address',superadmin_image='$new_img_name' WHERE superadmin_id='$id'");			
+							$check=mysqli_query($connect,"UPDATE superadmin SET superadmin_name='$name',superadmin_phone='$phone',superadmin_email='$email',superadmin_address='$address' WHERE superadmin_id='$id'");			
 						}
 							if($check) 
 					{
@@ -273,14 +225,6 @@ $email_check="";
 								</div>
 							</div>
 
-							<div class="col-md-4">
-									<div class="form-group">
-										<label>Profile Picture</label>
-										<div class="custom-file mb-3">
-											<input type="file" name="p_image" required>
-										</div>
-									</div>
-								</div> 
 				<input  type="submit" class="btn btn-primary buttonedit ml-2" name="save_product" value="Save">
 				<a href="superadmin_profile.php" class="btn btn-secondary">Back</a>
 						</form>

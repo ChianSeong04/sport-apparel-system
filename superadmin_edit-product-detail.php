@@ -292,6 +292,7 @@
 					?>
 						<script>
 					alert("Edit Successfully.");
+					window.location="superadmin_all-product-detail.php?view&id=<?php echo $detail_id ?>";
 					</script>
 			
 				<?php

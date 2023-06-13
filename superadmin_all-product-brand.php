@@ -152,6 +152,12 @@
 							{
 								$pid=$_GET['id'];
 								mysqli_query($connect,"UPDATE product_brand SET product_brand_status='0' WHERE product_brand_id='$pid'");
+							?>
+							<script>
+							alert("Delete Successfully.");
+							window.location="superadmin_all-product-brand.php";
+							</script>
+							<?php
 							}
 							?>
 							<script type="text/javascript">
